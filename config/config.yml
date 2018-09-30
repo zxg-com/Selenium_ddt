@@ -1,0 +1,28 @@
+EMAIL:
+  title: 测试报告
+  message: 测试报告见附件！
+  password: zxg680210
+  receiver: 342509492@qq.com
+  sender: zxg_com@163.com
+  server: smtp.163.com
+
+DB_huizhen:
+  host: wwwhuizhen.mysql.rds.aliyuncs.com
+  user: ceshi
+  passwd: (Djf9#8d
+  port: 3317
+  db: tocure_platform
+
+DB_allin:
+  host:
+  user: dev
+  passwd:
+  port:
+  db: allin_platform
+
+log:
+  backup: 5
+  console_level: WARNING
+  file_level: INFO
+  file_name: Output
+  pattern: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface>
+    <url name="login">
+        <action>/call/passport/securitycheck</action>
+    </url>
+</interface>

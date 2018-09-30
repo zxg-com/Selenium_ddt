@@ -1,0 +1,154 @@
+1538208101322	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.uJEgcsqS1dJV"
+2018-09-29 16:01:43.185 plugin-container[94275:1472388] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9b3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:01:43.459 plugin-container[94276:1472419] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9533, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208104021	Marionette	INFO	Listening on port 50283
+1538208104111	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538208104176	Marionette	DEBUG	[4294967297] Frame script loaded
+1538208104178	Marionette	DEBUG	[4294967297] Frame script registered
+1538208104207	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1538208104546	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+2018-09-29 16:01:44.856 plugin-container[94277:1472537] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9137, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208105081	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1538208105246	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1461_21122_18560_20930&csor=3&pwd=%E6%88%91%E6%88%91&cb=jQuery110209643223700454558_1538208104961&_=1538208104965, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1461_21122_18560_20930&csor=4&pwd=%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209643223700454558_1538208104961&_=1538208104966, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91&json=1&p=3&sid=1461_21122_18560_20930&csor=2&pwd=%E6%88%91&cb=jQuery110209643223700454558_1538208104961&_=1538208104964, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91&json=1&p=3&sid=1461_21122_18560_20930&csor=1&cb=jQuery110209643223700454558_1538208104961&_=1538208104963, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1461_21122_18560_20930&csor=5&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209643223700454558_1538208104961&_=1538208104967, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1461_21122_18560_20930&csor=6&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209643223700454558_1538208104961&_=1538208104968, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1461_21122_18560_20930&csor=7&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209643223700454558_1538208104961&_=1538208104969, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&json=1&p=3&sid=1461_21122_18560_20930&csor=9&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&cb=jQuery110209643223700454558_1538208104961&_=1538208104971, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&json=1&p=3&sid=1461_21122_18560_20930&csor=8&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209643223700454558_1538208104961&_=1538208104970, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=1461_21122_18560_20930&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery110209643223700454558_1538208104961&_=1538208104972, line 1: TypeError: jQuery110209643223700454558_1538208104961 is not a function
+1538208106175	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1538208111204	Marionette	INFO	Stopped listening on port 50283
+1538208326236	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.MTQXt2jRE5qt"
+2018-09-29 16:05:28.050 plugin-container[94635:1475912] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9937, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:05:28.430 plugin-container[94636:1475947] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9537, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208329099	Marionette	INFO	Listening on port 51232
+1538208329143	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538208329224	Marionette	DEBUG	[4294967297] Frame script loaded
+1538208329242	Marionette	DEBUG	[4294967297] Frame script registered
+1538208329306	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-09-29 16:05:29.367 plugin-container[94637:1476069] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9137, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208329677	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1538208330058	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1538208330137	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26524_1447_21078&csor=7&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209593947274668654_1538208329888&_=1538208329896, line 1: TypeError: jQuery110209593947274668654_1538208329888 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&json=1&p=3&sid=26524_1447_21078&csor=8&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209593947274668654_1538208329888&_=1538208329897, line 1: TypeError: jQuery110209593947274668654_1538208329888 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&json=1&p=3&sid=26524_1447_21078&csor=9&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&cb=jQuery110209593947274668654_1538208329888&_=1538208329898, line 1: TypeError: jQuery110209593947274668654_1538208329888 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26524_1447_21078&csor=4&pwd=%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209593947274668654_1538208329888&_=1538208329893, line 1: TypeError: jQuery110209593947274668654_1538208329888 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26524_1447_21078&csor=5&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209593947274668654_1538208329888&_=1538208329894, line 1: TypeError: jQuery110209593947274668654_1538208329888 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26524_1447_21078&csor=6&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110209593947274668654_1538208329888&_=1538208329895, line 1: TypeError: jQuery110209593947274668654_1538208329888 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=26524_1447_21078&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery110209593947274668654_1538208329888&_=1538208329899, line 1: TypeError: jQuery110209593947274668654_1538208329888 is not a function
+1538208330862	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1538208335887	Marionette	INFO	Stopped listening on port 51232
+1538208401061	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.8M3JeQ5bpHEQ"
+2018-09-29 16:06:42.854 plugin-container[94759:1477436] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9b37, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:06:43.172 plugin-container[94760:1477463] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9633, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:06:43.790 plugin-container[94761:1477552] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9237, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208403827	Marionette	INFO	Listening on port 51605
+1538208403856	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538208403925	Marionette	DEBUG	[4294967297] Frame script loaded
+1538208403927	Marionette	DEBUG	[4294967297] Frame script registered
+1538208403975	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1538208404253	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1538208404690	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1538208404775	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1441_21119_26350&csor=6&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102030926149832683303_1538208404559&_=1538208404566, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1441_21119_26350&csor=2&pwd=%E6%88%91&cb=jQuery1102030926149832683303_1538208404559&_=1538208404562, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&json=1&p=3&sid=26525_1441_21119_26350&csor=8&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102030926149832683303_1538208404559&_=1538208404568, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&json=1&p=3&sid=26525_1441_21119_26350&csor=9&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&cb=jQuery1102030926149832683303_1538208404559&_=1538208404569, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1441_21119_26350&csor=5&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102030926149832683303_1538208404559&_=1538208404565, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1441_21119_26350&csor=4&pwd=%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102030926149832683303_1538208404559&_=1538208404564, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1441_21119_26350&csor=7&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102030926149832683303_1538208404559&_=1538208404567, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1441_21119_26350&csor=3&pwd=%E6%88%91%E6%88%91&cb=jQuery1102030926149832683303_1538208404559&_=1538208404563, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=26525_1441_21119_26350&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery1102030926149832683303_1538208404559&_=1538208404570, line 1: TypeError: jQuery1102030926149832683303_1538208404559 is not a function
+1538208405569	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1538208410592	Marionette	INFO	Stopped listening on port 51605
+1538208564782	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.sf9wF7LHOG4p"
+2018-09-29 16:09:26.457 plugin-container[95034:1480334] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9533, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:09:26.845 plugin-container[95035:1480367] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9737, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208567462	Marionette	INFO	Listening on port 52397
+1538208567477	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538208567537	Marionette	DEBUG	[4294967297] Frame script loaded
+1538208567539	Marionette	DEBUG	[4294967297] Frame script registered
+1538208567570	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1538208567924	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+2018-09-29 16:09:28.239 plugin-container[95036:1480537] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9137, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1538208568417	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1538208568510	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1453_21109_26350&csor=5&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110208598124600562903_1538208568287&_=1538208568293, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1453_21109_26350&csor=3&pwd=%E6%88%91%E6%88%91&cb=jQuery110208598124600562903_1538208568287&_=1538208568291, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91&json=1&p=3&sid=1453_21109_26350&csor=2&pwd=%E6%88%91&cb=jQuery110208598124600562903_1538208568287&_=1538208568290, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&json=1&p=3&sid=1453_21109_26350&csor=8&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110208598124600562903_1538208568287&_=1538208568296, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&json=1&p=3&sid=1453_21109_26350&csor=9&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&cb=jQuery110208598124600562903_1538208568287&_=1538208568297, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1453_21109_26350&csor=4&pwd=%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110208598124600562903_1538208568287&_=1538208568292, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=1453_21109_26350&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery110208598124600562903_1538208568287&_=1538208568298, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1453_21109_26350&csor=6&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110208598124600562903_1538208568287&_=1538208568294, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1453_21109_26350&csor=7&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110208598124600562903_1538208568287&_=1538208568295, line 1: TypeError: jQuery110208598124600562903_1538208568287 is not a function
+1538208569220	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1538208574352	Marionette	INFO	Stopped listening on port 52397
+1538208637765	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.Y6ZvfNSrI9kv"
+2018-09-29 16:10:39.659 plugin-container[95159:1481807] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9837, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:10:39.969 plugin-container[95160:1481839] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x943b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:10:40.624 plugin-container[95161:1481936] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9237, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208640686	Marionette	INFO	Listening on port 52769
+1538208640755	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538208640833	Marionette	DEBUG	[4294967297] Frame script loaded
+1538208640837	Marionette	DEBUG	[4294967297] Frame script registered
+1538208640891	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1538208641155	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1538208641812	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1538208641893	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&json=1&p=3&sid=26525_1420_21083_26350_22159&csor=9&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&cb=jQuery110204935824170649099_1538208641506&_=1538208641516, line 1: TypeError: jQuery110204935824170649099_1538208641506 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1420_21083_26350_22159&csor=6&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110204935824170649099_1538208641506&_=1538208641513, line 1: TypeError: jQuery110204935824170649099_1538208641506 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1420_21083_26350_22159&csor=7&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110204935824170649099_1538208641506&_=1538208641514, line 1: TypeError: jQuery110204935824170649099_1538208641506 is not a function
+1538208642859	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1538208648138	Marionette	INFO	Stopped listening on port 52769
+1538208692339	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.2HpPmdoMgBOs"
+2018-09-29 16:11:34.285 plugin-container[95249:1483051] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9d37, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:11:34.623 plugin-container[95253:1483093] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x9637, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-09-29 16:11:35.194 plugin-container[95266:1483248] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x903b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1538208695268	Marionette	INFO	Listening on port 53075
+1538208695320	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538208695387	Marionette	DEBUG	[4294967297] Frame script loaded
+1538208695389	Marionette	DEBUG	[4294967297] Frame script registered
+1538208695434	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1538208695699	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1538208696179	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1538208696310	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91&json=1&p=3&sid=26525_1458_27213_21089&csor=1&cb=jQuery110207449632101788861_1538208696000&_=1538208696002, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1458_27213_21089&csor=2&pwd=%E6%88%91&cb=jQuery110207449632101788861_1538208696000&_=1538208696003, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1458_27213_21089&csor=4&pwd=%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110207449632101788861_1538208696000&_=1538208696005, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&json=1&p=3&sid=26525_1458_27213_21089&csor=8&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110207449632101788861_1538208696000&_=1538208696009, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1458_27213_21089&csor=3&pwd=%E6%88%91%E6%88%91&cb=jQuery110207449632101788861_1538208696000&_=1538208696004, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1458_27213_21089&csor=6&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110207449632101788861_1538208696000&_=1538208696007, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&json=1&p=3&sid=26525_1458_27213_21089&csor=9&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&cb=jQuery110207449632101788861_1538208696000&_=1538208696010, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1458_27213_21089&csor=5&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110207449632101788861_1538208696000&_=1538208696006, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=26525_1458_27213_21089&csor=7&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery110207449632101788861_1538208696000&_=1538208696008, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=26525_1458_27213_21089&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery110207449632101788861_1538208696000&_=1538208696011, line 1: TypeError: jQuery110207449632101788861_1538208696000 is not a function
+1538208697033	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1538208702182	Marionette	INFO	Stopped listening on port 53075
