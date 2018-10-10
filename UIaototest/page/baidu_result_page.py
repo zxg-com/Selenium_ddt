@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 from UIaototest.page.baidu_main_page import BaiDuMainPage
+from UIaototest.common.Basepage import BasePage
 
-
-class BaiDuResultPage(BaiDuMainPage):
+class BaiDuResultPage(BasePage):
     loc_result_links = (By.XPATH, '//div[contains(@class, "result")]/h3/a')
 
     @property

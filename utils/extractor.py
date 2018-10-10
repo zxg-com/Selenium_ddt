@@ -2,7 +2,7 @@
 
 import json
 import jmespath
-
+from utils.log import logger
 
 class JMESPathExtractor(object):
     """
@@ -12,7 +12,7 @@ class JMESPathExtractor(object):
         try:
             return jmespath.search(query, json.loads(body))
         except Exception as e:
-            raise ValueError("Invalid query: " + query + " : " + str(e))
+            logger.error("Invalid query: " + query + " : " + str(e))
 
 
 if __name__ == '__main__':

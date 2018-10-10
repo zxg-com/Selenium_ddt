@@ -835,3 +835,259 @@ JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88
 1538207870282	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
 1538207875306	Marionette	INFO	Stopped listening on port 49458
 1538269538398	Marionette	INFO	Stopped listening on port 60607
+1539155503613	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.3zQHMbv6ET7T"
+2018-10-10 15:11:46.060 plugin-container[979:61495] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8503, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:11:46.563 plugin-container[980:61534] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8607, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:11:47.302 plugin-container[981:61616] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8603, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539155507321	Marionette	INFO	Listening on port 49753
+1539155507451	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539155507518	Marionette	DEBUG	[4294967297] Frame script loaded
+1539155507532	Marionette	DEBUG	[4294967297] Frame script registered
+1539155507569	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1539155507957	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539155508582	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539155508679	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91&json=1&p=3&sid=1459_21103_18560_20930&csor=2&pwd=%E6%88%91&cb=jQuery1102022292703576699602_1539155508237&_=1539155508240, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&json=1&p=3&sid=1459_21103_18560_20930&csor=8&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102022292703576699602_1539155508237&_=1539155508246, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1459_21103_18560_20930&csor=7&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102022292703576699602_1539155508237&_=1539155508245, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1459_21103_18560_20930&csor=6&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102022292703576699602_1539155508237&_=1539155508244, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1459_21103_18560_20930&csor=5&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102022292703576699602_1539155508237&_=1539155508243, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1459_21103_18560_20930&csor=4&pwd=%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102022292703576699602_1539155508237&_=1539155508242, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&json=1&p=3&sid=1459_21103_18560_20930&csor=9&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&cb=jQuery1102022292703576699602_1539155508237&_=1539155508247, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=1459_21103_18560_20930&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery1102022292703576699602_1539155508237&_=1539155508248, line 1: TypeError: jQuery1102022292703576699602_1539155508237 is not a function
+1539155509482	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+[Parent 978, Gecko_IOThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 726
+1539155685490	Marionette	INFO	Stopped listening on port 49753
+1539155689009	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.XwNXGxeC16OQ"
+2018-10-10 15:14:51.018 plugin-container[1013:64838] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x893b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:14:51.429 plugin-container[1014:64862] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x863f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539155692006	Marionette	INFO	Listening on port 49850
+1539155692103	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539155692159	Marionette	DEBUG	[4294967297] Frame script loaded
+1539155692182	Marionette	DEBUG	[4294967297] Frame script registered
+1539155692205	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1539155692527	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+2018-10-10 15:14:52.790 plugin-container[1015:64984] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8f3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539155692989	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539155693056	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%911&json=1&p=3&sid=1438_21078_18559_26350_20927&csor=8&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91&cb=jQuery1102003612253717910474_1539155692843&_=1539155692852, line 1: TypeError: jQuery1102003612253717910474_1539155692843 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=1438_21078_18559_26350_20927&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery1102003612253717910474_1539155692843&_=1539155692854, line 1: TypeError: jQuery1102003612253717910474_1539155692843 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1438_21078_18559_26350_20927&csor=3&pwd=%E6%88%91%E6%88%91&cb=jQuery1102003612253717910474_1539155692843&_=1539155692847, line 1: TypeError: jQuery1102003612253717910474_1539155692843 is not a function
+1539155693769	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1539155937649	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.3hHNzlC82z9r"
+2018-10-10 15:18:59.421 plugin-container[1057:68849] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x883f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:18:59.830 plugin-container[1058:68901] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7207, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539155940595	Marionette	INFO	Listening on port 49956
+1539155940657	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539155940733	Marionette	DEBUG	[4294967297] Frame script loaded
+1539155940747	Marionette	DEBUG	[4294967297] Frame script registered
+1539155940782	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-10-10 15:19:00.827 plugin-container[1059:69025] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8903, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539155941226	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539155941692	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539155941772	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539155942497	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1539155947658	Marionette	INFO	Stopped listening on port 49956
+1539156655163	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.MErK7HM9P2Lr"
+2018-10-10 15:30:56.921 plugin-container[1144:81616] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8b47, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:30:57.384 plugin-container[1145:81642] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8a3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539156657945	Marionette	INFO	Listening on port 50297
+1539156658068	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539156658142	Marionette	DEBUG	[4294967297] Frame script loaded
+1539156658144	Marionette	DEBUG	[4294967297] Frame script registered
+1539156658167	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1539156658369	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539156658876	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539156658999	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+2018-10-10 15:30:59.162 plugin-container[1146:81786] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8943, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91123&json=1&p=3&sid=1452_21114_27244_20719&csor=10&pwd=%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%91%E6%88%9112&cb=jQuery1102020896601311774488_1539156658646&_=1539156658657, line 1: TypeError: jQuery1102020896601311774488_1539156658646 is not a function
+1539156659763	Marionette	DEBUG	[4294967297] Canceled page load listener because no navigation has been detected
+1539156664906	Marionette	INFO	Stopped listening on port 50297
+1539156802729	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.CGAwQIomEBlB"
+2018-10-10 15:33:24.599 plugin-container[1195:83953] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x913f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:33:25.119 plugin-container[1196:83981] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7407, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539156806108	Marionette	INFO	Listening on port 50403
+1539156806199	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539156806304	Marionette	DEBUG	[4294967297] Frame script loaded
+1539156806306	Marionette	DEBUG	[4294967297] Frame script registered
+1539156806366	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-10-10 15:33:26.535 plugin-container[1199:84117] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8d3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539156806734	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1539156807522	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539156807697	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539156838143	Marionette	INFO	Stopped listening on port 50403
+1539156926553	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.lOAKGRurPmIK"
+2018-10-10 15:35:29.218 plugin-container[1219:85578] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7807, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:35:29.739 plugin-container[1222:85640] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8b43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539156930099	Marionette	INFO	Listening on port 50484
+1539156930186	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539156930260	Marionette	DEBUG	[4294967297] Frame script loaded
+1539156930263	Marionette	DEBUG	[4294967297] Frame script registered
+1539156930302	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1539156930595	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539156931216	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539156931402	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+2018-10-10 15:35:31.864 plugin-container[1223:85762] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8047, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E6%88%91%E6%88%91%E6%88%91&json=1&p=3&sid=1434_21087_27244_20929&csor=3&pwd=%E6%88%91%E6%88%91&cb=jQuery110209601293764716949_1539156930901&_=1539156930905, line 1: TypeError: jQuery110209601293764716949_1539156930901 is not a function
+1539156961872	Marionette	INFO	Stopped listening on port 50484
+2018-10-10 15:36:54.415 plugin-container[1228:86748] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x6c47, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539157064465	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.t9b670WMfveM"
+2018-10-10 15:37:46.211 plugin-container[1237:87556] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x883f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:37:46.646 plugin-container[1238:87580] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8743, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539157067366	Marionette	INFO	Listening on port 50575
+1539157067453	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539157067532	Marionette	DEBUG	[4294967297] Frame script loaded
+1539157067534	Marionette	DEBUG	[4294967297] Frame script registered
+1539157067572	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-10-10 15:37:47.605 plugin-container[1239:87688] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x873f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539157067877	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539157068254	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539157068333	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539157098667	Marionette	INFO	Stopped listening on port 50575
+1539157422330	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.WUabXDebEVRF"
+2018-10-10 15:43:44.167 plugin-container[1286:92811] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8b3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:43:44.570 plugin-container[1287:92836] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8843, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539157425071	Marionette	INFO	Listening on port 50679
+1539157425121	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539157425183	Marionette	DEBUG	[4294967297] Frame script loaded
+1539157425185	Marionette	DEBUG	[4294967297] Frame script registered
+1539157425225	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1539157425552	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+2018-10-10 15:43:45.924 plugin-container[1288:92976] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8943, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539157426026	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539157426125	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539157456457	Marionette	INFO	Stopped listening on port 50679
+1539158210160	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.6JQssNRG6IOx"
+2018-10-10 15:56:52.073 plugin-container[1464:103086] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x713b, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:56:52.477 plugin-container[1465:103111] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8d3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158213083	Marionette	INFO	Listening on port 50779
+1539158213142	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539158213217	Marionette	DEBUG	[4294967297] Frame script loaded
+1539158213222	Marionette	DEBUG	[4294967297] Frame script registered
+1539158213254	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-10-10 15:56:53.354 plugin-container[1466:103228] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x793f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158213596	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539158213972	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539158214052	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539158244372	Marionette	INFO	Stopped listening on port 50779
+1539158394285	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.DOgBlkGFsCQN"
+2018-10-10 15:59:56.011 plugin-container[1496:106324] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8e3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 15:59:56.421 plugin-container[1497:106350] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8f43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158397079	Marionette	INFO	Listening on port 50843
+1539158397173	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539158397247	Marionette	DEBUG	[4294967297] Frame script loaded
+1539158397248	Marionette	DEBUG	[4294967297] Frame script registered
+1539158397307	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-10-10 15:59:57.340 plugin-container[1498:106460] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8b43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158397655	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539158398129	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539158398327	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539158428650	Marionette	INFO	Stopped listening on port 50843
+1539158456115	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.Sv5AqEJGOYOK"
+2018-10-10 16:00:57.763 plugin-container[1512:107320] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7c43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 16:00:58.192 plugin-container[1513:107347] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x773f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158458722	Marionette	INFO	Listening on port 50900
+1539158458784	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539158458842	Marionette	DEBUG	[4294967297] Frame script loaded
+1539158458845	Marionette	DEBUG	[4294967297] Frame script registered
+1539158458881	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1539158459181	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+2018-10-10 16:00:59.514 plugin-container[1514:107498] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x6d3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539158459644	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539158459807	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539158490158	Marionette	INFO	Stopped listening on port 50900
+1539158551909	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.uOC3PwqCyxyg"
+2018-10-10 16:02:33.790 plugin-container[1539:108736] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x733f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 16:02:34.214 plugin-container[1540:108764] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x863f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158554879	Marionette	INFO	Listening on port 50965
+1539158554886	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539158554973	Marionette	DEBUG	[4294967297] Frame script loaded
+1539158554978	Marionette	DEBUG	[4294967297] Frame script registered
+1539158555006	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-10-10 16:02:35.146 plugin-container[1541:108920] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7533, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158555666	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539158555991	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539158556070	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+JavaScript error: chrome://global/content/browser-child.js, line 416: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIDocShell.doCommandWithParams]
+1539158586891	Marionette	INFO	Stopped listening on port 50965
+1539158662432	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.wxJtImxgwZrS"
+2018-10-10 16:04:24.199 plugin-container[1563:110627] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x703f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 16:04:24.580 plugin-container[1564:110711] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8643, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158665085	Marionette	INFO	Listening on port 51023
+1539158665125	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539158665188	Marionette	DEBUG	[4294967297] Frame script loaded
+1539158665202	Marionette	DEBUG	[4294967297] Frame script registered
+1539158665229	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1539158665496	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1539158666160	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539158666317	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+2018-10-10 16:04:26.601 plugin-container[1565:110831] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x893f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158696961	Marionette	INFO	Stopped listening on port 51023
+1539158895989	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/cv/8bz6392x7xg6jwxdh74952780000gn/T/rust_mozprofile.1l4upKbNMJy1"
+2018-10-10 16:08:17.695 plugin-container[1594:115039] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x703f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+2018-10-10 16:08:18.131 plugin-container[1595:115066] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7643, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158898729	Marionette	INFO	Listening on port 51124
+1539158898781	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539158898872	Marionette	DEBUG	[4294967297] Frame script loaded
+1539158898876	Marionette	DEBUG	[4294967297] Frame script registered
+1539158898941	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+2018-10-10 16:08:18.997 plugin-container[1596:115181] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x6d3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1539158899292	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_mac_82990d4.js, line 4: ReferenceError: c is not defined
+1539158899678	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.baidu.com/
+1539158899812	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.baidu.com/
+1539158930630	Marionette	INFO	Stopped listening on port 51124

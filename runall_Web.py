@@ -54,10 +54,10 @@ class RunAll():
                     runner.run(suite)
                 f.close()
             else:
-                logger.info("error：*****没发现测试用例*****")
+                logger.error("error：*****没发现测试用例*****")
         except Exception as ex:
             logger.error(ex)
-            raise
+
         finally:
             logger.info("******测试结束******")
             #e = Email(path=report)  # 发邮件

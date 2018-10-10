@@ -52,7 +52,7 @@ class HTTPClient(object):
         self.set_headers(self.headers)
         self.set_cookies(self.cookies)
         if self.method not in METHODS:
-            raise UnSupportMethodException('不支持的method:{0}，请检查传入参数！'.format(self.method))
+            logger.error('不支持的method:{0}，请检查传入参数！'.format(self.method))
         print("测试用例:【" + self.case_name + "】开始前准备")
 
     def set_headers(self, headers):

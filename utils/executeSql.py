@@ -24,8 +24,7 @@ class db():
             self.database = pymysql.connect(**config)  #数据库连接  **config将字典转化为字符串host='',user=''....
             self.cursor = self.database.cursor()  # 使用cursor()方法获取操作游标
         except Exception as e:
-            raise ("数据库连接异常，请查看!报错：s%",e)
-            logger.info("数据库连接失败")
+            logger.error("数据库连接失败"+str(e))
 
 
     def execute_sql_select(self,sql):  #仅查询

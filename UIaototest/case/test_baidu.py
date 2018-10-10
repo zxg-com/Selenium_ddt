@@ -8,13 +8,13 @@ from utils.file_reader import ExcelReader
 from utils.HTMLTestReportCN import HTMLTestRunner
 from utils.mail import Email
 import datetime
-from UIaototest.page.baidu_result_page import BaiDuMainPage, BaiDuResultPage
+from UIaototest.page import baidu_result_page,baidu_main_page
 from UIaototest.common.Basepage import BasePage
 from utils.config import DATA_FILE
 import ddt
+from UIaototest.common import driver_configure
 
-
-
+#excel输入数据
 excelpath=DATA_PATH + '//API.xls'
 ecl=ExcelReader(excelpath,'首页输入数据').get_ddtvalue()
 ecl1 = ExcelReader(excelpath, sheetname='页面url')
@@ -23,35 +23,42 @@ ecl1 = ExcelReader(excelpath, sheetname='页面url')
 @ddt.ddt
 class TestBaiDu(unittest.TestCase):
         case_name = '百度搜索'
-
-        def setUp(self):
-
+        @classmethod
+        def setUpClass(cls):
+        # def setUp(self):
+            dr=driver_configure.Driver_configure()
+            cls.driver=dr.get_driver()
             URL = ecl1.rowsvalue(rowname='百度首页')[1]  #excel取值
-            self.page=BaiDuMainPage()
-            self.page.get(URL)
+            cls.baidu_main_p=baidu_main_page.BaiDuMainPage(cls.driver)
+            cls.baidu_main_p.get(URL)
             logger.info("打开" + URL)
             # tearDown 清理
 
         @ddt.data(*ecl)
         def test_search(self,data):
-            self.page.inputl(data[1])
+            self.baidu_main_p.inputl(data[1])
             logger.info('输入'+data[1])
-            self.page.but_click()
-            self.page.scrollTop_firefox('1000') #滑动滚轮
-            self.page.saveScreenshot(name='百度结果页')  #截图
+            self.baidu_main_p.but_click()
+            self.baidu_main_p.scrollTop_firefox('1000') #滑动滚轮
+            self.baidu_main_p.saveScreenshot(name='百度结果页')  #截图
 
-            self.page = BaiDuResultPage(self.page)  # 页面跳转到result page,才可以用下一页内容的操作
+            self.baidu_result_p = baidu_result_page.BaiDuResultPage(self.driver) # 页面跳转到result page,才可以用下一页内容的操作
             logger.info("页面进入搜索结果页")
-            links = self.page.result_links
+            links = self.baidu_result_p.result_links
             # for link in links:
             #     print(link.text)
-            print(self.page.get_title())
-
-        def tearDown(self):
-            self.page.close()
+            print(self.baidu_result_p.get_title())\
 
 
-#
+        @classmethod
+        def tearDownClass(cls):
+            cls.driver.close()
+
+        # def tearDown(self):
+        #     self.driver.close()
+
+
+
 # if __name__ == '__main__':
 #     report = REPORT_PATH + "//report.html"
 #     with open(report, 'wb') as ff:
