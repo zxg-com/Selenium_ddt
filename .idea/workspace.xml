@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3c8fa58-68c8-4eef-9660-f1536583312e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UIaototest/common/driver_configure.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/__init__.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/Output2018-09-29.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/Image/20180929161047_ccc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/UItestReport20180929-151544.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/API.xls" afterPath="$PROJECT_DIR$/data/API.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/globalparameter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/Base_page.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/driver_configure.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/gesture_mainpulation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/common/send_email.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/login_page.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/runtest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test_case/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test_case/test_appium.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIaototest/case/test_baidu.py" afterPath="$PROJECT_DIR$/UIaototest/case/test_baidu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIaototest/page/baidu_result_page.py" afterPath="$PROJECT_DIR$/UIaototest/page/baidu_result_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geckodriver.log" afterPath="$PROJECT_DIR$/geckodriver.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runall_Web.py" afterPath="$PROJECT_DIR$/runall_Web.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/assertion.py" afterPath="$PROJECT_DIR$/utils/assertion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/client_http.py" afterPath="$PROJECT_DIR$/utils/client_http.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/executeSql.py" afterPath="$PROJECT_DIR$/utils/executeSql.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/extractor.py" afterPath="$PROJECT_DIR$/utils/extractor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/log.py" afterPath="$PROJECT_DIR$/utils/log.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +29,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Basepage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Basepage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UIaototest/common/Basepage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
@@ -41,6 +37,48 @@
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/login_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runtest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/runtest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#61#81#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globalparameter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/globalparameter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,11 +158,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/interface/case.py" />
         <option value="$PROJECT_DIR$/interface/comm.py" />
         <option value="$PROJECT_DIR$/interface/test_socket.py" />
         <option value="$PROJECT_DIR$/utils/client_socket.py" />
@@ -175,6 +215,7 @@
         <option value="$PROJECT_DIR$/utils/file_reader.py" />
         <option value="$PROJECT_DIR$/log/Output2018-10-10.log" />
         <option value="$PROJECT_DIR$/UIaototest/common/Basepage.py" />
+        <option value="$PROJECT_DIR$/src/runtest.py" />
       </list>
     </option>
   </component>
@@ -200,6 +241,9 @@
         </selected-state>
       </profile-state>
     </entry>
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -230,48 +274,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Testframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Selenium_ddt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Testframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Selenium_ddt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Testframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Selenium_ddt" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -291,6 +293,8 @@
       <recent name="C:\Users\ALLIN\PycharmProjects\Testframework\interface" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/UIaototest/common" />
       <recent name="$PROJECT_DIR$/drivers" />
       <recent name="C:\Users\ALLIN\PycharmProjects\Testframework\data" />
@@ -549,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539159091119</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="driver封装">
+      <created>1539159128661</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1539159128661</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -595,9 +606,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31759655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31759655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -668,10 +678,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/KeywordAutoTest/common/actionMethod.py" />
-    <entry file="file://$PROJECT_DIR$/KeywordAutoTest/common/keyword_case.py" />
-    <entry file="file://$PROJECT_DIR$/log2018-09-29Test.log" />
-    <entry file="file://$PROJECT_DIR$/log/2018-09-29Test.log" />
     <entry file="file://$PROJECT_DIR$/UIaototest/case/geckodriver.log" />
     <entry file="file://$PROJECT_DIR$/report/uireport20180929Sep091538202456.html" />
     <entry file="file://$PROJECT_DIR$/report/UItestReport20180929-141410.html" />
@@ -987,6 +993,40 @@
           <folding>
             <element signature="e#17#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/runtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/globalparameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
