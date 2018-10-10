@@ -4,14 +4,21 @@ import os
 from selenium import webdriver
 from utils.config import DRIVER_PATH, REPORT_PATH
 from utils.file_reader import Readini
+from selenium.webdriver.support import  expected_conditions as EC
 import re
 import datetime
+from utils.log import logger
+from selenium.webdriver.support.wait import WebDriverWait
+
+
+
 # 驱动路径
 CHROMEDRIVER_PATH = DRIVER_PATH + '/chromedriver.exe'
 IEDRIVER_PATH = DRIVER_PATH + '/IEDriverServer.exe'
 FIREFOXDRIVER = DRIVER_PATH + '/geckodriver'
 SAFARIDRIVER=DRIVER_PATH + '/safaridriver'
 EDGEDRIVER=DRIVER_PATH + '/edgedriver.exe'
+
 
 TYPES = {'firefox': webdriver.Firefox, 'chrome': webdriver.Chrome, 'ie': webdriver.Ie,'safari':webdriver.Safari ,'edge':webdriver.Edge}
 EXECUTABLE_PATH = {'firefox': FIREFOXDRIVER, 'chrome': CHROMEDRIVER_PATH, 'ie': IEDRIVER_PATH ,'safari':SAFARIDRIVER,'edge':EDGEDRIVER}
@@ -26,19 +33,19 @@ class BasePage(object):
 
 
 
-    def __init__(self,page=None,browser_type='firefox'):
-
-        if page:
-            self.driver=page.driver
-        else:
-
-            self._type = browser_type.lower()
-            if self._type in TYPES:
-                self.browser = TYPES[self._type]
-            else:
-                raise UnSupportBrowserTypeError('仅支持%s!' % ','.join(TYPES.keys()))
-
-            self.driver = self.browser(executable_path=EXECUTABLE_PATH[self._type])
+    def __init__(self,driver):
+        self.driver=driver
+        # if page:
+        #     self.driver=page.driver
+        # else:
+        #
+        #     self._type = browser_type.lower()
+        #     if self._type in TYPES:
+        #         self.browser = TYPES[self._type]
+        #     else:
+        #         raise UnSupportBrowserTypeError('仅支持%s!' % ','.join(TYPES.keys()))
+        #
+        #     self.driver = self.browser(executable_path=EXECUTABLE_PATH[self._type])
 
 
     def get(self, url, maximize_window=True, implicitly_wait=30):    #get(url)
@@ -53,11 +60,17 @@ class BasePage(object):
 
 
     def find_element(self, *args):       #find_element()
-        return self.driver.find_element(*args)
-
+        try:
+            WebDriverWait(self.driver,1).until(EC.visibility_of_element_located(args))
+            return self.driver.find_element(*args)
+        except Exception as e:
+             logger.error('未找到指定元素')
     #定位组
     def find_elements(self, *args):
-        return self.driver.find_elements(*args)
+        try:
+            return self.driver.find_elements(*args)
+        except Exception as e:
+            logger.error(e)
 
 
     def close(self):
