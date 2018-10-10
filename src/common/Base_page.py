@@ -6,6 +6,14 @@ description:UI页面公共类
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+import time
+import os
+from selenium import webdriver
+from utils.config import DRIVER_PATH, REPORT_PATH
+import datetime
+from utils.log import logger
+
+
 
 class Base_page:
     def __init__(self,driver):
@@ -17,7 +25,7 @@ class Base_page:
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
             return self.driver.find_element(*loc)
         except Exception as e:
-            raise e
+            logger.error('没定位到元素')
 
     def send_keys(self,value,*loc):
         try:

@@ -16,6 +16,7 @@ REPORT_PATH = os.path.join(BASE_PATH, 'report')
 UICASE_FILE = os.path.join(BASE_PATH,'UIaototest')
 CONFIG_INI= os.path.join(BASE_PATH, 'config', 'config.ini')
 CONFIG_XML=os.path.join(BASE_PATH, 'config', 'config.xml')
+PACKAGE_PATH = os.path.join(DATA_PATH,'package')
 
 class Config:
     def __init__(self,config=CONFIG_FILE):
