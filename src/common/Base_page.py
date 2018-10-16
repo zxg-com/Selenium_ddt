@@ -5,7 +5,6 @@ description:UI页面公共类
 '''
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 import time
 import os
 from selenium import webdriver
