@@ -14,9 +14,10 @@ DRIVER_PATH = os.path.join(BASE_PATH, 'drivers')
 LOG_PATH = os.path.join(BASE_PATH, 'log')
 REPORT_PATH = os.path.join(BASE_PATH, 'report')
 UICASE_FILE = os.path.join(BASE_PATH,'UIaototest')
+APP_UICASE_FILE=os.path.join(BASE_PATH,'src')
 CONFIG_INI= os.path.join(BASE_PATH, 'config', 'config.ini')
 CONFIG_XML=os.path.join(BASE_PATH, 'config', 'config.xml')
-PACKAGE_PATH = os.path.join(DATA_PATH,'package')
+PACKAGE_PATH = os.path.join(DRIVER_PATH,'package')
 
 class Config:
     def __init__(self,config=CONFIG_FILE):
@@ -34,6 +35,6 @@ class Config:
 
 
 #存入data_yaml
-    def set(self,param,value):
-        config = YamlReader(self.CONFIG_FILE).set_data(param,value)
+    def set(self,param,value,index_name='PARAM'):
+        config = YamlReader(self.CONFIG_FILE).set_data(param,value,index_name)
 

@@ -9,46 +9,20 @@ import re
 import datetime
 from utils.log import logger
 from selenium.webdriver.support.wait import WebDriverWait
+from UIaototest.common.driver_configure import Driver_configure
 
+class BasePage():
 
-
-# 驱动路径
-CHROMEDRIVER_PATH = DRIVER_PATH + '/chromedriver.exe'
-IEDRIVER_PATH = DRIVER_PATH + '/IEDriverServer.exe'
-FIREFOXDRIVER = DRIVER_PATH + '/geckodriver'
-SAFARIDRIVER=DRIVER_PATH + '/safaridriver'
-EDGEDRIVER=DRIVER_PATH + '/edgedriver.exe'
-
-
-TYPES = {'firefox': webdriver.Firefox, 'chrome': webdriver.Chrome, 'ie': webdriver.Ie,'safari':webdriver.Safari ,'edge':webdriver.Edge}
-EXECUTABLE_PATH = {'firefox': FIREFOXDRIVER, 'chrome': CHROMEDRIVER_PATH, 'ie': IEDRIVER_PATH ,'safari':SAFARIDRIVER,'edge':EDGEDRIVER}
-
-
-class UnSupportBrowserTypeError(Exception):
-    pass
-
-
-
-class BasePage(object):
-
-
-
-    def __init__(self,driver):
-        self.driver=driver
-        # if page:
-        #     self.driver=page.driver
-        # else:
-        #
-        #     self._type = browser_type.lower()
-        #     if self._type in TYPES:
-        #         self.browser = TYPES[self._type]
-        #     else:
-        #         raise UnSupportBrowserTypeError('仅支持%s!' % ','.join(TYPES.keys()))
-        #
-        #     self.driver = self.browser(executable_path=EXECUTABLE_PATH[self._type])
-
+    def __init__(self,page=None):
+        if page:
+            self.driver=page.driver
+        else:
+            dr = Driver_configure()
+            driver = dr.get_driver()
+            self.driver=driver
 
     def get(self, url, maximize_window=True, implicitly_wait=30):    #get(url)
+
         self.driver.get(url)
         if maximize_window:
             self.driver.maximize_window()
@@ -64,7 +38,7 @@ class BasePage(object):
             WebDriverWait(self.driver,1).until(EC.visibility_of_element_located(args))
             return self.driver.find_element(*args)
         except Exception as e:
-             logger.error('未找到指定元素')
+             logger.error('未找到指定元素'+str(args))
     #定位组
     def find_elements(self, *args):
         try:
@@ -84,7 +58,7 @@ class BasePage(object):
         name：自定义图片的名称
         """
         day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-        fp =  REPORT_PATH+ "/Image/"
+        fp =  REPORT_PATH+ "/WebImage/"
         tm = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
         type = ".png"
         if os.path.exists(fp):
@@ -155,3 +129,4 @@ class BasePage(object):
 
     def accept_alert(self):
         self.driver.switch_to.alert().accept() #确认alert
+

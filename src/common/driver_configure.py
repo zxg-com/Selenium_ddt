@@ -4,28 +4,71 @@ __author__ = 'Helen'
 description:driver配置
 '''
 from appium import webdriver
-from utils.config import PACKAGE_PATH
+from utils.config import PACKAGE_PATH,Config,DRIVER_PATH
+from src.devices.server import Server
+import time
 
 
-class driver_configure():
 
-    def get_driver(self):
+class driver_configure:
+
+
+
+    def Androiddriver(self,i=0):  #默认一个设备，自动获取devicesUUID
         '''获取driver'''
         try:
-            package_path = PACKAGE_PATH + '/YiDing_v1.1.5_20170331_test_signed_7zip_aligned.apk'
-            self.desired_caps = {}
-            self.desired_caps['platformName'] = 'Android'  # 平台
-            #self.desired_caps['platformVersion'] = '6.0'  # 系统版本
-            self.desired_caps['app'] = package_path   # 指向.apk文件，如果设置appPackage和appActivity，那么这项会被忽略
-            #self.desired_caps['appPackage'] = 'com.xsteach.appedu'     # APK包名
-            self.desired_caps['appActivity'] = 'cn.net.yiding.commbll.guidance.LoadingActivity'     # 被测程序启动时的Activity
-            self.desired_caps['unicodeKeyboard'] = 'true'   # 是否支持unicode的键盘。如果需要输入中文，要设置为“true”
-            self.desired_caps['resetKeyboard'] = 'true' # 是否在测试结束后将键盘重轩为系统默认的输入法。
-            self.desired_caps['newCommandTimeout'] = '120' # Appium服务器待appium客户端发送新消息的时间。默认为60秒
-            self.desired_caps['deviceName'] = '612QKBQD225A2'     # 手机ID
-            self.desired_caps['noReset'] = True # true:不重新安装APP，false:重新安装app
+            #z执行appium语句
+            server = Server()
+            server.main()
+            time.sleep(5)
+            evpath = DRIVER_PATH + '/environment.yml'
+            port = Config(evpath).get("device"+str(i) ).get('port')
+            package_path = PACKAGE_PATH + '/Allinmd_v2.5.6_auto_online.apk'
 
-            self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",self.desired_caps)
+            self.desired_caps1 = {}
+            self.desired_caps1['platformName'] = 'Android'  # 设备系统
+            self.desired_caps1['platformVersion'] = '7.1.2'  # 设备系统版本
+            self.desired_caps1['deviceName'] = 'Android'  # 华为mate10设备名称
+            self.desired_caps1['app'] = package_path
+            #self.desired_caps1['udid'] = "49652d02"   # devices
+            self.desired_caps1['appPackage'] = 'com.allin.social'
+            self.desired_caps1['automationName'] = 'Appium'
+            self.desired_caps1['appActivity'] = 'com.allin.social.WelcomeActivity'
+            self.desired_caps1['noReset'] = 'False'
+            self.desired_caps1['newCommandTimeout'] = '600'
+            self.driver = webdriver.Remote("127.0.0.1:"+port+"/wd/hub", self.desired_caps1)
             return self.driver
         except Exception as  e:
             raise e
+
+
+
+
+    # def getdriver1(self,i=0):
+    #     '''获取driver'''
+    #     try:
+    #         server=Server()
+    #         server.main()
+    #         time.sleep(5)
+    #         self.desired_caps1 = {}
+    #         evpath = DRIVER_PATH + '/environment.yml'
+    #         port = Config(evpath).get("device" + str(i)).get('port')
+    #         package_path = PACKAGE_PATH + '/Allinmd_v2.5.6_auto_online.apk'
+    #         self.desired_caps1['platformName'] = 'Android'  # 设备系统
+    #         self.desired_caps1['platformVersion'] = '7.1.2'  # 设备系统版本
+    #         self.desired_caps1['deviceName'] = 'Android'  # 华为mate10设备名称
+    #         self.desired_caps1['app'] = package_path
+    #         # self.desired_caps1['udid'] = "49652d02"   # devices
+    #         self.desired_caps1['appPackage'] = 'com.allin.social'
+    #         self.desired_caps1['automationName'] = 'Appium'
+    #         self.desired_caps1['appActivity'] = 'com.allin.social.WelcomeActivity'
+    #         self.desired_caps1['noReset'] = 'False'
+    #         self.desired_caps1['newCommandTimeout'] = '600'
+    #         self.driver = webdriver.Remote("127.0.0.1:" + port + "/wd/hub", self.desired_caps1)
+    #
+    #
+    #
+    #         return self.driver
+    #     except Exception as  e:
+    #         raise e
+    #

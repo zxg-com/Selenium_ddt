@@ -28,7 +28,7 @@ class YamlReader:
         return self._data
 
 
-    def set_data(self,param,value,index_name='PARAM'):
+    def set_data(self,param,value,index_name):
         with open(self.yamlf, "rb", ) as f:
             data = dict(yaml.safe_load(f))
         data[index_name][param] = value   #更新data，添加加字典键和值
@@ -36,7 +36,17 @@ class YamlReader:
         # 将更新后的data写档
         with open(self.yamlf, "w") as f:
             yaml.safe_dump(data, f, default_flow_style=False)  # indent:缩进 block_seq_indent:区块缩
-            f.close()
+        f.close()
+
+    def write_data(self,data):
+        with open(self.yamlf,"a") as  f:
+            yaml.dump(data,f)
+        f.close()
+
+    def clear_yaml(self):
+        with open(self.yamlf, "w") as  f:
+            f.truncate()  #清理文件
+        f.close()
 
 
 

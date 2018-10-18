@@ -15,9 +15,45 @@ def assertstatus(response):
     res_status=response.json()['responseObject']['responseStatus']
     asserts.assert_equal(res_status,True)
 
+
+
 def assertIn(content,res):
-    assertIn(content,res)
+    try:
+        asserts.assert_in(content,res)
+    except Exception as e:
+        logger.error(e)
 
 
+def assertNotIn(content,res):
+    try:
+        asserts.assert_not_in(content,res)
+    except Exception as e:
+        logger.error(e)
 
 
+def assertEqual(content,res):
+    try:
+        asserts.assert_equal(content,res)
+    except Exception as e:
+        logger.error(e)
+
+
+def assertNotEqual(content,res):
+    try:
+        asserts.assert_not_equal(content,res)
+    except Exception as e:
+        logger.error(e)
+
+
+def assertIsNone(res):
+    try:
+        asserts.assert_is_none(res)
+    except Exception as e:
+        logger.error(e)
+
+
+def assertIsNotNone(res):
+    try:
+        asserts.assert_is_not_none(res)
+    except Exception as e:
+        logger.error(e)

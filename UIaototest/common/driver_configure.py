@@ -5,10 +5,7 @@ description:driver配置
 import time
 import os
 from selenium import webdriver
-from utils.config import DRIVER_PATH, REPORT_PATH
-from utils.file_reader import Readini
-import re
-import datetime
+from utils.config import DRIVER_PATH
 from utils.log import logger
 
 
@@ -27,6 +24,7 @@ EXECUTABLE_PATH = {'firefox': FIREFOXDRIVER, 'chrome': CHROMEDRIVER_PATH, 'ie': 
 
 
 
+
 class Driver_configure():
     def __init__(self,browser_type="firefox"):
         self._type = browser_type.lower()
@@ -38,7 +36,7 @@ class Driver_configure():
 
     def get_driver(self):
         try:
-            self.driver = self.browser(executable_path=EXECUTABLE_PATH[self._type])
-            return self.driver
+            driver = self.browser(executable_path=EXECUTABLE_PATH[self._type])
+            return driver
         except Exception as  e:
             logger.error(e)

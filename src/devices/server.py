@@ -2,12 +2,18 @@
 #获取设备信息
 from src.devices.doc_cmd import Doc_cmd
 import threading
-from utils.file_reader import Readini
+from utils.file_reader import Readini,YamlReader
+from utils.config import DRIVER_PATH
+from utils.config import Config
+import time
 
 
-class Saerver:
+class Server:
     def __init__(self):
         self.dos = Doc_cmd()
+        self.devices_list=self.get_devices()
+        evpath = DRIVER_PATH + '/environment.yml'
+        self.yaml = YamlReader(evpath)
     #设备list
     def get_devices(self):
         '''
@@ -16,19 +22,19 @@ class Saerver:
         '''
         devices_list=[]
         result_list = self.dos.excute_cmd_result('adb devices')
-
-        #执行结果['List of devices attached', 'c824d603\tunauthorized', '']
+        #执行结果['List of devices attached', '2ed0d2f3\tdevice', 'c824d603\tdevice', '']
         #['List of devices attached', '']
         #默认为空是就是2，所以要写成3
         if len(result_list)>=3:
             for i in  result_list:
-                if 'List' in i:
-                    continue
-                else:
-                    devices_info = i.split('\t')  #\t分割设备名和设备类型
-                    if devices_info[1]:
-                        devices_list.append(devices_info[0])
-                return devices_list
+                if i !="":
+                    if 'List' in i:
+                        continue
+                    else:
+                        devices_info = i.split('\t')  #\t分割设备名和设备类型
+                        if i.split('\t')[1]:
+                            devices_list.append(i.split('\t')[0])
+            return devices_list
         else:
             return None
 
@@ -68,28 +74,32 @@ class Saerver:
             return None
 
     #命令appium
-    def crete_command_list(self):
+    def crete_command_list(self,i):
         '''
         生成命令行list，多个设备多个命令行
         #appium -p 4700 -bp 4701 -U 设备devicesName
         :return: command_list 根据设备数量决定
         '''
-        read_ini=Readini()
-        port=read_ini.get("EVIORMENT","port")
-        b_port=read_ini.get("EVIORMENT","bp")
+        port=Config().get('EVIORMENT').get('port')
+        b_port=Config().get('EVIORMENT').get('bp')
         command_list = []
         appium_port_list = self.create_port_list(int(port))  #监听端口list
         bootstrap_port_list = self.create_port_list(int(b_port))  #链接安卓端口list
-        devices_list=self.get_devices()
-        for i in  range(len(devices_list)):
+
+        # for i in  range(len(self.devices_list)):
             #命令
-            command = "appium -p "+ str(appium_port_list[i]) + " -bp "+str(bootstrap_port_list[i]) + " -U "+devices_list[i] + " --no-reset --session-override"
-            #-p  监听端口
-            #-bp  是连接Android设备bootstrap的端口号，默认是4724
-            #-U 链接设备名称
-            #--session-override是指覆盖之前的session
-            #--no-reset   每次启动不重启
-            command_list.append(command)
+        command = "appium -p "+ str(appium_port_list[i]) + " -bp "+str(bootstrap_port_list[i]) + " -U "+self.devices_list[i] + "  --session-override"+'\n'
+        #-p  监听端口
+        #-bp  是连接Android设备bootstrap的端口号，默认是4724
+        #-U 链接设备名称
+        #--session-override是指覆盖之前的session
+        #--no-reset   每次启动不重启
+        command_list.append(command)
+        #写入yaml
+        deviceInfo ={"device"+str(i):{'port':str(appium_port_list[i]),'deviceName':str(self.devices_list[i]),'bp':str(bootstrap_port_list[i])}}
+
+        self.yaml.write_data(data=deviceInfo)
+
         return command_list
 
 
@@ -110,8 +120,13 @@ class Saerver:
 
     # 执行 创建好的命令list
     def start_server(self, i):
-        self.start_list = self.crete_command_list()
-        self.dos.excute_cmd(self.start_list[i])
+        self.yaml.clear_yaml()
+        self.kill_server()
+        time.sleep(2)
+        self.start_list = self.crete_command_list(i)
+        print("执行命令： " + self.start_list[0])
+        self.dos.excute_cmd(self.start_list[0])
+
 
     #主要函数 多进程调用启动方法
     def main(self):
@@ -119,20 +134,29 @@ class Saerver:
         多线程启动appium
         :return: 
         '''
+        #清理yaml里创建成功的设备信息
+        self.yaml.clear_yaml()
         #先杀掉进程,清理环境
         self.kill_server()
-        command_list=self.crete_command_list()
-        for i in  range(len(command_list)):
-            print("执行命令："+command_list[i])
-            appium = threading.Thread(target=self.start_server,args=(i,))
-            appium.start()
-            print("该进程启动成功")
+        time.sleep(2)
+        try:
+            thread_list=[]
+            for i in  range(len(self.devices_list)):
 
+                appium = threading.Thread(target=self.start_server,args=(i,))
+                thread_list.append(appium)
+
+            for t in  thread_list:
+                t.start()
+                time.sleep(10)
+                print("该进程启动成功")
+        except Exception as ex:
+            print('请检查设备列表是否为空')
 
 if __name__ == '__main__':
-    server=Saerver()
+    server=Server()
     #print(server.get_devices())
     #print(server.create_port_list(4720))
     #print(server.crete_command_list())
     #server.kill_server()
-    #server.main()
+    server.start_server(0)

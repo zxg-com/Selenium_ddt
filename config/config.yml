@@ -26,3 +26,10 @@ log:
   file_level: INFO
   file_name: Output
   pattern: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+
+EVIORMENT:
+  port: 4720
+  bp: 4900
+  threshold_shape : 0.8
+  threshold_histogram : 0.4
