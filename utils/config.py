@@ -19,6 +19,9 @@ CONFIG_INI= os.path.join(BASE_PATH, 'config', 'config.ini')
 CONFIG_XML=os.path.join(BASE_PATH, 'config', 'config.xml')
 PACKAGE_PATH = os.path.join(DRIVER_PATH,'package')
 
+Img_path_cv =os.path.join(BASE_PATH,'Image')
+
+
 class Config:
     def __init__(self,config=CONFIG_FILE):
              self.CONFIG_FILE=config
