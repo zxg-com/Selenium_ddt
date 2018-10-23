@@ -1,16 +1,18 @@
 # coding:utf-8
-__author__ = 'Helen'
 '''
 description:UI页面公共类
 '''
+import os
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from utils.log import logger
 from src.common.driver_configure import driver_configure
 from selenium.webdriver.common.action_chains import ActionChains
 from appium.webdriver.common.touch_action import TouchAction
-from utils.config import Config
-
+from utils.config import Config,Img_path_cv
+from utils.cv import GraphicalLocator
+import time
+import subprocess
 
 class Base_page:
     def __init__(self,page=None):
@@ -20,6 +22,7 @@ class Base_page:
             dr = driver_configure()
             self.driver= dr.Androiddriver()
 
+#----------appium-----------------------
     def find_element(self,*loc):
         '''重写find_element方法，显式等待'''
         try:
@@ -75,7 +78,7 @@ class Base_page:
     #弹窗授权，每次都允许
     def always_allow(self):
         for i in range(5):
-            loc = ("xpath", "//*[@text='允许']")  #安卓不同版本文案不同
+            loc = ("xpath", "//*[@text='始终允许']")  #安卓不同版本文案不同
             try:
                 e = WebDriverWait(self.driver, 1, 0.5).until(EC.presence_of_element_located(loc))
                 e.click()
@@ -83,3 +86,105 @@ class Base_page:
                 pass
 
 
+
+#----------------open-cv-----------------------
+#find_element
+    def find_element_cv(self,msg,img):
+        '''
+        :param msg: 元素描述
+        :param img: 图
+        :param th_shape: 图形阈值 
+        :param th_histogram:直方图阈值 
+        :return: 元素中心坐标（x,y）
+        '''
+        th_shape=0.6
+        th_histogram=0.4
+        cv = GraphicalLocator(self.driver)
+
+        cv.find_me(img)
+        #存储定位成功图片位置
+        path = os.path.join(Img_path_cv, '测试过程定位截图')
+        cv.rectangle(path,img,msg)
+        if cv.threshold['shape'] >= th_shape :#and cv.threshold['histogram'] >= th_histogram:
+            print('元素定位-->【'+msg+'】图形匹配度'+str(cv.threshold['shape'])+'   颜色匹配度：'+str(cv.threshold['histogram']) + '元素【'+msg+'】   坐标：'+str(cv.center_x) + '，'+str(cv.center_y))
+            return cv.center_x ,cv.center_y
+
+        else:
+
+            print('元素定位失败-->元素：【' + msg + '】图形匹配度' + str(cv.threshold['shape']) + '   颜色匹配度：' + str(cv.threshold['histogram']))
+            return None
+
+
+
+#---------------------安卓------------------
+#adb shell input swipe x y x1 y1  1000  x=x1,y=y1长按/滑动 1000ms
+# adb shell input keyevent  26 or 'KEYCODE_POWER'  按power键
+    #click
+    def move_and_click(self,msg,img):
+        location=self.find_element_cv(msg,img)
+        x=location[0]
+        y=location[1]
+        subprocess.getoutput('adb shell input tap '+str(x)+' '+str(y))
+        print('元素操作成功-->点击[' + msg + ']')
+        self.driver.implicitly_wait(5)
+
+    #send_keys
+    def click_and_sendkeys(self, msg,img,method,value):
+
+        location = self.find_element_cv(msg, img)
+        x = location[0]
+        y = location[1]
+        subprocess.getoutput('adb shell input tap ' + str(x) + ' ' + str(y))
+        print('元素操作成功-->点击[' + msg + ']')
+        if method == '输入':
+            subprocess.getoutput('adb shell am broadcast -a ADB_INPUT_TEXT --es msg '+value)
+        else:
+            subprocess.getoutput('adb shell input text ' + value)
+        print('元素操作-->[' + msg + ']输入：'+value)
+        self.driver.implicitly_wait(5)
+
+
+
+    #assert
+    def assertImgElement(self,msg,img):#阈值大于90  颜色阈值大于60
+        '''
+        :param img: 断言图片
+        :param msg: 描述
+        :return: 是否存在True/False
+        '''
+        cv_assert = GraphicalLocator(self.driver)
+        th_sh = 0.6
+        cv_assert.find_me(img)
+        path = os.path.join(Img_path_cv,'测试过程定位截图')
+        cv_assert.rectangle(path, img, msg)
+        if cv_assert.threshold['shape'] >= th_sh:
+            print('断言元素--> 【'+msg+'】 存在,元素图形匹配度：'+str(cv_assert.threshold['shape']))
+        else:
+            print('断言元素--> 【' + msg + '】 不存在,元素图形匹配度：'+str(cv_assert.threshold['shape']))
+            raise AssertionError(msg+'断言失败')
+
+        time.sleep(1)
+
+
+
+
+    def Android_control(self,msg,img,method,value=None):
+        '''
+        :param msg: 元素描述
+        :param img: 图片路径
+        :param method: 方法：点击/输入
+        :param value: 输入的内容sendkeys
+        :return: 
+        '''
+
+        if method == '点击':
+            self.move_and_click(msg,img)
+        elif method == '原生输入' or method == '输入':
+            self.click_and_sendkeys(msg,img,method,value)
+        else:
+            print(method+'输入有误，现支持点击/输入内容')
+
+
+
+
+#----------------ios ----------------

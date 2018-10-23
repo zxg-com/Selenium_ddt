@@ -217,16 +217,16 @@ class BasePage():
         :return: 是否存在True/False
         '''
         cv_assert = GraphicalLocator(self.driver)
-        th_sh = 0.8
+        th_sh = 0.6
         cv_assert.find_me(img)
         path = os.path.join(Img_path_cv,'测试过程定位截图')
         #cv_assert.rectangle(path, img, msg)
         if cv_assert.threshold['shape'] >= th_sh:
             print('断言元素--> 【'+msg+'】 存在,元素图形匹配度：'+str(cv_assert.threshold['shape']))
-            return True
+            pass
         else:
             print('断言元素--> 【' + msg + '】 不存在,元素图形匹配度：'+str(cv_assert.threshold['shape']))
-            return False
+            raise AssertionError(msg + '断言失败')
         time.sleep(1)
 
 
