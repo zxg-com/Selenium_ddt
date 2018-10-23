@@ -1,15 +1,15 @@
 #  页面元素集，操作元素的方法
 import time
 import os
-from selenium import webdriver
-from utils.config import DRIVER_PATH, REPORT_PATH
-from utils.file_reader import Readini
+from utils.cv import GraphicalLocator
+from utils.config import  REPORT_PATH
 from selenium.webdriver.support import  expected_conditions as EC
-import re
 import datetime
 from utils.log import logger
 from selenium.webdriver.support.wait import WebDriverWait
 from UIaototest.common.driver_configure import Driver_configure
+from selenium.webdriver.common.action_chains import ActionChains
+from utils.config import Img_path_cv
 
 class BasePage():
 
@@ -20,6 +20,11 @@ class BasePage():
             dr = Driver_configure()
             driver = dr.get_driver()
             self.driver=driver
+
+        #cv使用action
+        self.action = ActionChains(self.driver)
+
+
 
     def get(self, url, maximize_window=True, implicitly_wait=30):    #get(url)
 
@@ -32,7 +37,7 @@ class BasePage():
 
     #定位
 
-
+#------------------------------------------selenium基础定位--------------------------
     def find_element(self, *args):       #find_element()
         try:
             WebDriverWait(self.driver,1).until(EC.visibility_of_element_located(args))
@@ -129,4 +134,120 @@ class BasePage():
 
     def accept_alert(self):
         self.driver.switch_to.alert().accept() #确认alert
+
+
+
+
+#------------------------------------------OPEN-CV图像定位--------------------------
+
+
+#find_element
+    def find_element_cv(self,msg,img):
+        '''
+        :param msg: 元素描述
+        :param img: 图
+        :param th_shape: 图形阈值 
+        :param th_histogram:直方图阈值 
+        :return: 元素中心坐标（x,y）
+        '''
+        th_shape=0.8
+        th_histogram=0.4
+        cv = GraphicalLocator(self.driver)
+
+        cv.find_me(img)
+        #存储定位成功图片位置
+        path = os.path.join(Img_path_cv, '测试过程定位截图')
+        #cv.rectangle(path,img,msg)
+        if cv.threshold['shape'] >= th_shape :#and cv.threshold['histogram'] >= th_histogram:
+            print('元素定位-->【'+msg+'】图形匹配度'+str(cv.threshold['shape'])+'   颜色匹配度：'+str(cv.threshold['histogram']) + '元素【'+msg+'】   坐标：'+str(cv.center_x) + '，'+str(cv.center_y))
+            return cv.center_x ,cv.center_y
+
+        else:
+
+            print('元素定位失败-->元素：【' + msg + '】图形匹配度' + str(cv.threshold['shape']) + '   颜色匹配度：' + str(cv.threshold['histogram']))
+            return None
+
+
+
+
+    #悬停
+    def move(self,msg,img,backgroudXpath):
+        action = ActionChains(self.driver)
+        location=self.find_element_cv(msg,img)
+        x=location[0]
+        y=location[1]
+        el = self.driver.find_element_by_xpath(backgroudXpath)
+        action.move_to_element_with_offset(el,x,y).perform()
+        print('元素操作成功-->悬停：[' + msg + ']')
+        time.sleep(2)
+
+    #click
+    def move_and_click(self,msg,img,backgroudXpath):
+        action = ActionChains(self.driver)
+        location=self.find_element_cv(msg,img)
+        x=location[0]
+        y=location[1]
+        el = self.driver.find_element_by_xpath(backgroudXpath)
+        action.move_to_element_with_offset(el,x,y).click().perform()
+        print('元素操作成功-->点击[' + msg + ']')
+        self.driver.implicitly_wait(5)
+        time.sleep(2)
+
+    #send_keys
+    def click_and_sendkeys(self, msg,img,backgroudXpath,value):
+        action = ActionChains(self.driver)
+        location = self.find_element_cv(msg, img)
+        x = location[0]
+        y = location[1]
+        el = self.driver.find_element_by_xpath(backgroudXpath)
+        action.move_to_element_with_offset(el, x, y).click().perform()
+        print('元素操作成功-->点击[' + msg + ']')
+        self.driver.implicitly_wait(5)
+        action.send_keys(value).perform()
+        print('元素操作-->[' + msg + ']输入：'+value)
+        time.sleep(2)
+
+
+
+    #assert
+    def assertImgElement(self,msg,img):#阈值大于90  颜色阈值大于60
+        '''
+        :param img: 断言图片
+        :param msg: 描述
+        :return: 是否存在True/False
+        '''
+        cv_assert = GraphicalLocator(self.driver)
+        th_sh = 0.8
+        cv_assert.find_me(img)
+        path = os.path.join(Img_path_cv,'测试过程定位截图')
+        #cv_assert.rectangle(path, img, msg)
+        if cv_assert.threshold['shape'] >= th_sh:
+            print('断言元素--> 【'+msg+'】 存在,元素图形匹配度：'+str(cv_assert.threshold['shape']))
+            return True
+        else:
+            print('断言元素--> 【' + msg + '】 不存在,元素图形匹配度：'+str(cv_assert.threshold['shape']))
+            return False
+        time.sleep(1)
+
+
+
+
+    def pc_control(self,backgroudXpath,msg,img,method,value=None):
+        '''
+        :param backgroudXpath: 页面背景xpath
+        :param msg: 元素描述
+        :param img: 图片路径
+        :param method: 方法：点击/悬停/输入
+        :param value: 输入的内容sendkeys
+        :return: 
+        '''
+
+        if method == '点击':
+            self.move_and_click(msg,img,backgroudXpath)
+        elif method == '输入':
+            self.click_and_sendkeys(msg,img,backgroudXpath,value)
+        elif method == '悬停':
+            self.move(msg,img,backgroudXpath)
+        else:
+            print(method+'输入有误，现支持点击/悬停/输入内容')
 
