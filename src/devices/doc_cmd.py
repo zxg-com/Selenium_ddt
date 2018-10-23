@@ -1,5 +1,6 @@
 #coding = utf-8
 import os
+import subprocess
 
 
 
@@ -16,6 +17,9 @@ class Doc_cmd:
 
     def excute_cmd(self,command):
         os.system(command)
+
+    def excute_cmd_mac(self,command):
+        subprocess.getoutput(command)
 
 # if __name__ == '__main__':
 #     dos = Doc_cmd()

@@ -112,20 +112,17 @@ class Server:
         #server_list = self.dos.excute_cmd_result('tasklist | find "node.exe"') #windows查看进程
         server_list = self.dos.excute_cmd_result('ps aux | grep node') #mac/linux查看进程
         if len(server_list)>0:
-            #self.dos.excute_cmd('taskkill -F -PID node.exe') #存在杀掉进程
-            self.dos.excute_cmd('killall node') #mac 杀进程
+            #self.dos.excute_cmd('taskkill -F -PID node.exe') #windows杀掉进程
+            self.dos.excute_cmd_mac('killall node') #mac 杀进程
             print('node进程清理完毕')
         else:
             pass
 
     # 执行 创建好的命令list
     def start_server(self, i):
-        self.yaml.clear_yaml()
-        self.kill_server()
-        time.sleep(2)
         self.start_list = self.crete_command_list(i)
         print("执行命令： " + self.start_list[0])
-        self.dos.excute_cmd(self.start_list[0])
+        self.dos.excute_cmd_mac(self.start_list[0])
 
 
     #主要函数 多进程调用启动方法
@@ -143,13 +140,14 @@ class Server:
             thread_list=[]
             for i in  range(len(self.devices_list)):
 
-                appium = threading.Thread(target=self.start_server,args=(i,))
+                appium=threading.Thread(target=self.start_server,args=(i,))
                 thread_list.append(appium)
 
-            for t in  thread_list:
+            for t in thread_list:
                 t.start()
                 time.sleep(10)
                 print("该进程启动成功")
+
         except Exception as ex:
             print('请检查设备列表是否为空')
 
@@ -159,4 +157,4 @@ if __name__ == '__main__':
     #print(server.create_port_list(4720))
     #print(server.crete_command_list())
     #server.kill_server()
-    server.start_server(0)
+    server.main()

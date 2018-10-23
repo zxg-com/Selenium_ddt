@@ -2,28 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3c8fa58-68c8-4eef-9660-f1536583312e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/密码输入框.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/手机号输入框.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/登录按钮.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/账号密码登录tab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image/app_android_allinmd/首次开屏页/跳过.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Image/app_android_allinmd/首页/立即更新.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drivers/package/ADBKeyBoard.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pages/init_page.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/login.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/mobile.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/password.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Image/app_android_allinmd/登录页/tab.jpeg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test_case/test_appium.py" afterPath="$PROJECT_DIR$/src/test_case/test_login.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/src_image/login.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/src_image/mobile.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/src_image/password.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/src_image/tab.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/report\image\\20180929160934_ccc.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UIaototest/common/Basepage.py" afterPath="$PROJECT_DIR$/UIaototest/common/Basepage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drivers/environment.yml" afterPath="$PROJECT_DIR$/drivers/environment.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Base_page.py" afterPath="$PROJECT_DIR$/src/common/Base_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/driver_configure.py" afterPath="$PROJECT_DIR$/src/common/driver_configure.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/initpage.py" afterPath="$PROJECT_DIR$/src/pages/initpage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages/login_page.py" afterPath="$PROJECT_DIR$/src/pages/login_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/suite/caselist.txt" afterPath="$PROJECT_DIR$/src/suite/caselist.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/devices/doc_cmd.py" afterPath="$PROJECT_DIR$/src/devices/doc_cmd.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/devices/server.py" afterPath="$PROJECT_DIR$/src/devices/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +24,18 @@
     <favorites_list name="Testframework" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="driver_configure.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/common/driver_configure.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,12 +110,10 @@
         <option value="$PROJECT_DIR$/src/common/doc_cmd.py" />
         <option value="$PROJECT_DIR$/src/common/port.py" />
         <option value="$PROJECT_DIR$/src/common/server.py" />
-        <option value="$PROJECT_DIR$/src/devices/doc_cmd.py" />
         <option value="$PROJECT_DIR$/utils/file_reader.py" />
         <option value="$PROJECT_DIR$/src/common/cv.py" />
         <option value="$PROJECT_DIR$/config/config.yml" />
         <option value="$PROJECT_DIR$/src/runMore.py" />
-        <option value="$PROJECT_DIR$/src/devices/server.py" />
         <option value="$PROJECT_DIR$/src/runtest.py" />
         <option value="$PROJECT_DIR$/UIaototest/common/driver_configure.py" />
         <option value="$PROJECT_DIR$/log/Output2018-10-18.log" />
@@ -144,6 +140,8 @@
         <option value="$PROJECT_DIR$/report/App_UItestReport20181023-154612.html" />
         <option value="$PROJECT_DIR$/src/test_case/test_login.py" />
         <option value="$PROJECT_DIR$/src/common/Base_page.py" />
+        <option value="$PROJECT_DIR$/src/devices/doc_cmd.py" />
+        <option value="$PROJECT_DIR$/src/devices/server.py" />
       </list>
     </option>
   </component>
@@ -202,6 +200,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Selenium_ddt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Selenium_ddt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Selenium_ddt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Selenium_ddt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -240,7 +302,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.runtest">
+  <component name="RunManager" selected="Python.server">
     <configuration default="false" name="etst" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,24 +337,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="baidu_main_page" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UIaototest/page" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Selenium_ddt" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UIaototest/page/baidu_main_page.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -324,6 +368,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Selenium_ddt" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/runtest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/devices" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Selenium_ddt" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/devices/server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -435,17 +497,17 @@
       <item index="1" class="java.lang.String" itemvalue="Python.test_baidu.py" />
       <item index="2" class="java.lang.String" itemvalue="Python.etst" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test_login.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python.baidu_main_page" />
-      <item index="5" class="java.lang.String" itemvalue="Python.test" />
-      <item index="6" class="java.lang.String" itemvalue="Python.runtest" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+      <item index="5" class="java.lang.String" itemvalue="Python.runtest" />
+      <item index="6" class="java.lang.String" itemvalue="Python.server" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.runtest" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test_login.py" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.etst" />
-        <item index="4" class="java.lang.String" itemvalue="Python.baidu_main_page" />
+        <item index="0" class="java.lang.String" itemvalue="Python.server" />
+        <item index="1" class="java.lang.String" itemvalue="Python.runtest" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in test_login.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.etst" />
       </list>
     </recent_temporary>
   </component>
@@ -537,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540260941966</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="cv定位，断言 安卓封装完毕，测试成功">
+      <created>1540281614143</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1540281614143</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -583,15 +652,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34477827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34477827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3421687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3421687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -647,7 +717,8 @@
     <MESSAGE value="po分层优化，根据page。driver来实现&#10;一些需要登录的，直接引入登录页直接使用即可，非常方便" />
     <MESSAGE value="断言封装+po分层优化" />
     <MESSAGE value="open——cv pc测试结合po分层完毕" />
-    <option name="LAST_COMMIT_MESSAGE" value="open——cv pc测试结合po分层完毕" />
+    <MESSAGE value="cv定位，断言 安卓封装完毕，测试成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="cv定位，断言 安卓封装完毕，测试成功" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -681,9 +752,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UIaototest/case/搜索输入框.jpg" />
-    <entry file="file://$PROJECT_DIR$/UIaototest/case/搜索按钮.jpg" />
-    <entry file="file://$PROJECT_DIR$/etst.py" />
     <entry file="file://$PROJECT_DIR$/geckodriver.log" />
     <entry file="file://$PROJECT_DIR$/UIaototest/case/geckodriver.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
@@ -738,13 +806,6 @@
     <entry file="file://$PROJECT_DIR$/Image/app_android_allinmd/登录页/password.jpeg" />
     <entry file="file://$PROJECT_DIR$/Image/app_android_allinmd/登录页/mobile.jpeg" />
     <entry file="file://$PROJECT_DIR$/Image/app_android_allinmd/登录页/login.jpeg" />
-    <entry file="file://$PROJECT_DIR$/drivers/environment.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Image/app_android_allinmd/登录页/tab.jpeg" />
     <entry file="file://$PROJECT_DIR$/UIaototest/page/baidu_result_page.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -770,6 +831,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,7 +840,7 @@
         <state relative-caret-position="285">
           <caret line="19" column="65" lean-forward="false" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -854,7 +916,7 @@
         <state relative-caret-position="315">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#40#72#0" expanded="true" />
+            <element signature="e#40#72#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -872,7 +934,7 @@
         <state relative-caret-position="89">
           <caret line="45" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <element signature="e#40#72#0" expanded="true" />
+            <element signature="e#40#72#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -943,7 +1005,7 @@
         <state relative-caret-position="404">
           <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,8 +1033,42 @@
         <state relative-caret-position="425">
           <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#46#61#0" expanded="true" />
+            <element signature="e#46#61#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/devices/doc_cmd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="e#16#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivers/environment.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/devices/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="150" column="31" lean-forward="false" selection-start-line="150" selection-start-column="31" selection-end-line="150" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/driver_configure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
