@@ -6,7 +6,7 @@ import os
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from utils.log import logger
-from src.common.driver_configure import driver_configure
+from UI_Android.common.driver_configure import driver_configure
 from selenium.webdriver.common.action_chains import ActionChains
 from appium.webdriver.common.touch_action import TouchAction
 from utils.config import Config,Img_path_cv
@@ -46,31 +46,39 @@ class Base_page:
         except AttributeError as  e:
             raise e
 
+    #切换webview
+    def switch_webview(self):
+        handles = self.driver.contexts  # 所有窗口的句柄
+        self.driver.switch_to.context(handles[1])
+
+    def switch_defaul_webview(self):
+        self.driver.switch_to.context("NATIVE_APP")
 
 
-    def swipe_left(self,driver):
+
+    def swipe_left(self):
         '''左滑'''
-        x = driver.get_window_size()['width']
-        y = driver.get_window_size()['height']
-        driver.swipe(x*3/4,y/4,x/4,y/4)
+        x = self.driver.get_window_size()['width']
+        y = self.driver.get_window_size()['height']
+        self.driver.swipe(x*3/4,y/4,x/4,y/4)
 
-    def swipe_right(self,driver):
+    def swipe_right(self):
         '''右滑'''
-        x = driver.get_window_size()['width']
-        y = driver.get_window_size()['height']
-        driver.swipe(x/4,y/4,x*3/4,y/4)
+        x = self.driver.get_window_size()['width']
+        y = self.driver.get_window_size()['height']
+        self.driver.swipe(x/4,y/4,x*3/4,y/4)
 
-    def swipe_down(self,driver):
+    def swipe_down(self):
         '''下滑'''
-        x = driver.get_window_size()['width']
-        y = driver.get_window_size()['height']
-        driver.swipe(x/2,y*3/4,x/2,y/4)
+        x = self.driver.get_window_size()['width']
+        y = self.driver.get_window_size()['height']
+        self.driver.swipe(x/2,y*3/4,x/2,y/4)
 
-    def swipe_up(self,driver):
+    def swipe_up(self):
         '''上滑'''
-        x = driver.get_window_size()['width']
-        y = driver.get_window_size()['height']
-        driver.swipe(x/2,y/4,x/2,y*3/4)
+        x = self.driver.get_window_size()['width']
+        y = self.driver.get_window_size()['height']
+        self.driver.swipe(x/2,y/4,x/2,y*3/4)
 
     def quit(self):
         self.driver.quit()
@@ -187,4 +195,3 @@ class Base_page:
 
 
 
-#----------------ios ----------------

@@ -3,7 +3,7 @@
 '''
 description:登录页
 '''
-from src.common import Base_page
+from UI_Android.common import Base_page
 from appium.webdriver.common import mobileby
 from utils.config import Img_path_cv
 import os

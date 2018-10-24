@@ -5,7 +5,7 @@ description:driver配置
 '''
 from appium import webdriver
 from utils.config import PACKAGE_PATH,Config,DRIVER_PATH
-from src.devices.server import Server
+from UI_Android.devices.server import Server
 import time
 
 
@@ -21,7 +21,7 @@ class driver_configure:
             server = Server()
             server.main()
             time.sleep(5)
-            evpath = DRIVER_PATH + '/environment.yml'
+            evpath = DRIVER_PATH + '/Android_environment.yml'
             port = Config(evpath).get("device"+str(i) ).get('port')
             package_path = PACKAGE_PATH + '/Allinmd_v2.5.6_auto_online.apk'
 
@@ -51,7 +51,7 @@ class driver_configure:
     #         server.main()
     #         time.sleep(5)
     #         self.desired_caps1 = {}
-    #         evpath = DRIVER_PATH + '/environment.yml'
+    #         evpath = DRIVER_PATH + '/Android_environment.yml'
     #         port = Config(evpath).get("device" + str(i)).get('port')
     #         package_path = PACKAGE_PATH + '/Allinmd_v2.5.6_auto_online.apk'
     #         self.desired_caps1['platformName'] = 'Android'  # 设备系统

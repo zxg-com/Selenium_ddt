@@ -5,8 +5,8 @@ from utils.config import REPORT_PATH,APP_UICASE_FILE
 from utils.mail import Email
 from utils.log import logger
 import datetime
-from src.devices.server import Server
-from src.common.driver_configure import driver_configure
+from UI_Android.devices.server import Server
+from UI_Android.common.driver_configure import driver_configure
 import threading
 
 class RunAll():

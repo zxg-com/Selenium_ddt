@@ -1,6 +1,6 @@
 #coding=utf-8
 #获取设备信息
-from src.devices.doc_cmd import Doc_cmd
+from UI_Android.devices.doc_cmd import Doc_cmd
 import threading
 from utils.file_reader import Readini,YamlReader
 from utils.config import DRIVER_PATH
@@ -12,7 +12,7 @@ class Server:
     def __init__(self):
         self.dos = Doc_cmd()
         self.devices_list=self.get_devices()
-        evpath = DRIVER_PATH + '/environment.yml'
+        evpath = DRIVER_PATH + '/Android_environment.yml'
         self.yaml = YamlReader(evpath)
     #设备list
     def get_devices(self):

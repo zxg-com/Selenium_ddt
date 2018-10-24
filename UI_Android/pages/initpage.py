@@ -1,5 +1,5 @@
 import os
-from src.common.Base_page import Base_page
+from UI_Android.common.Base_page import Base_page
 from utils.config import Img_path_cv
 from appium.webdriver.common import mobileby
 
