@@ -19,7 +19,7 @@ class Doc_cmd:
         os.system(command)
 
     def excute_cmd_mac(self,command):
-        subprocess.getoutput(command)
+        subprocess.Popen(command)
 
 # if __name__ == '__main__':
 #     dos = Doc_cmd()
