@@ -5,7 +5,7 @@ from utils.config import REPORT_PATH,APP_UICASE_FILE_IOS
 from utils.mail import Email
 from utils.log import logger
 import datetime
-from UI_IOS.devices.server import Server
+
 from UI_IOS.common.driver_configure import driver_configure
 import threading
 

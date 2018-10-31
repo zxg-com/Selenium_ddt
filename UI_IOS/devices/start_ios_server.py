@@ -27,11 +27,13 @@ class IOS_Server:
 
     def build_WDA_appium(self):
         #切换路径 到WDA
+        self.dos.excute_cmd_mac(['iproxy','8100','8100'])
         os.chdir('/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/')
         time.sleep(1)
         print('正在执行命令：xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination id=' + self.uuid + ' test')
         uuid_id='id='+self.uuid
         self.dos.excute_cmd_mac(['xcodebuild','-project','WebDriverAgent.xcodeproj','-scheme','WebDriverAgentRunner','-destination',uuid_id,'test'])
+        #切回当前工作目录，防止文件调用出错
         os.chdir(os.path.split(os.path.realpath(__file__))[0])
 
 
@@ -62,8 +64,8 @@ class IOS_Server:
 
         self.clear_evior()
         self.build_WDA_appium()
-        print('正在执行命令：appium --session-override')
-        self.dos.excute_cmd_mac(['appium','--session-override'])
+        print('正在执行命令：appium ')
+        self.dos.excute_cmd_mac('appium')
         time.sleep(15)
         print('appium 已启动')
 
