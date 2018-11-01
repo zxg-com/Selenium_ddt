@@ -18,9 +18,7 @@ class driver_configure:
         '''获取driver'''
         try:
             #z执行appium语句
-            server = Server()
-            server.main()
-            time.sleep(5)
+
             evpath = DRIVER_PATH + '/Android_environment.yml'
             port = Config(evpath).get("device"+str(i) ).get('port')
             package_path = PACKAGE_PATH + '/Allinmd_v2.5.6_auto_online.apk'
@@ -34,7 +32,7 @@ class driver_configure:
             self.desired_caps1['appPackage'] = 'com.allin.social'
             self.desired_caps1['automationName'] = 'Appium'
             self.desired_caps1['appActivity'] = 'com.allin.social.WelcomeActivity'
-            self.desired_caps1['noReset'] = 'False'
+            self.desired_caps1['noReset'] = 'True'
             self.desired_caps1['newCommandTimeout'] = '600'
             self.driver = webdriver.Remote("127.0.0.1:"+port+"/wd/hub", self.desired_caps1)
             return self.driver

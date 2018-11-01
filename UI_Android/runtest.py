@@ -46,6 +46,11 @@ class RunAll():
         return test_suite
 
     def run(self):
+        #启动appium
+        server = Server()
+        server.main()
+
+
         suite=self.set_case_suite()
         report = REPORT_PATH + "//App_UItestReport" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
         try:

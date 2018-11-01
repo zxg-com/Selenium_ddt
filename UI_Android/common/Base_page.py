@@ -55,7 +55,25 @@ class Base_page:
         self.driver.switch_to.context("NATIVE_APP")
 
 
+    # 组合查找，多次操作查找
+    def findLocal(self):
+        x = 1
+        while x == 1:
+            if self.fack() == 1:
+                self.swipe_up()  # 滑动操作,也可以是点击刷新按钮
+                time.sleep(2)
+                self.fack()
+            else:
+                print('找到了')
+                x = 2
+    def fack(self, *loc):
+        n = 1
+        try:
+            self.find_element(*loc).click()
+        except Exception as  e:
+            return n
 
+    #滑动操作
     def swipe_left(self):
         '''左滑'''
         x = self.driver.get_window_size()['width']
