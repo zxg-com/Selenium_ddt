@@ -16,29 +16,32 @@ class Login_page(Base_page.Base_page):
     def click(self):
         self.driver.find_element_by_ios_predicate()
 
-    zhanghao_tab = "name == '帐号密码登录'"
-    input_mobile = "value == '请输入手机号或邮箱' AND type=='XCUIElementTypeTextField'"
-    input_password = "value == '请输入登录密码' AND type == 'XCUIElementTypeTextField'"
-    login_btn= "name == '立即进入' AND label == '立即进入'"
+    zhanghao_tab = (by.NAME,'帐号密码登录')
+    input_mobile = (by.XPATH,"//*[contains(@value,'请输入手机号或邮箱')]")
+    input_password = (by.XPATH,"//*[contains(@value,'请输入登录密码')]")
+    login_btn= (by.NAME,'立即进入')
 
 
 
     def click_zhanghaotab(self):
-        self.click_button_ios(self.zhanghao_tab)
+        self.click_button(*self.zhanghao_tab)
 
     def input_user(self,username):
-        self.send_keys_ios(username,self.input_mobile)
+        self.send_keys(username,*self.input_mobile)
 
     def input_Pws(self,password):
-        self.send_keys_ios(password,self.input_password)
+        self.send_keys(password,*self.input_password)
+
 
     def click_login(self):
-        self.click_button_ios(self.login_btn)
+        self.click_button(*self.login_btn)
 
 
     # # --------图形定位-------
     # item = 'app_android_allinmd'
     # page = '登录页'
+
+
     # tab = '账号密码登录tab'
     # login_btn='登录按钮'
     # mibole_input='手机号输入框'

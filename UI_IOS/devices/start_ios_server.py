@@ -27,6 +27,7 @@ class IOS_Server:
 
     def build_WDA_appium(self):
         #切换路径 到WDA
+        print('执行命令：【iproxy 8100 8100】')
         self.dos.excute_cmd_mac(['iproxy','8100','8100'])
         os.chdir('/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/')
         time.sleep(1)
@@ -57,7 +58,14 @@ class IOS_Server:
         else:
             pass
 
-
+        server_list_xcode = self.dos.excute_cmd_result('ps aux | grep iproxy')  # mac/linux查看进程
+        if len(server_list_xcode) > 0:
+            # self.dos.excute_cmd('taskkill -F -PID node.exe') #windows杀掉进程
+            self.dos.excute_cmd('killall iproxy')  # mac 杀进程
+            self.dos.excute_cmd('killall iproxy')
+            print('xcode进程清理完毕')
+        else:
+            pass
 
 
     def main(self):
@@ -66,7 +74,7 @@ class IOS_Server:
         self.build_WDA_appium()
         print('正在执行命令：appium ')
         self.dos.excute_cmd_mac('appium')
-        time.sleep(15)
+        time.sleep(10)
         print('appium 已启动')
 
 
@@ -75,4 +83,4 @@ class IOS_Server:
 if __name__ == '__main__':
     s=IOS_Server()
     #s.clear_evior()
-    s.main()
+    s.clear_evior()

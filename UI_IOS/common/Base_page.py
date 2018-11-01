@@ -13,7 +13,7 @@ from utils.config import Config,Img_path_cv
 from utils.cv import GraphicalLocator
 import time
 import subprocess
-
+from appium.webdriver.common import touch_action
 class Base_page:
     def __init__(self,page=None):
         if page:
@@ -25,17 +25,28 @@ class Base_page:
 #----------appium-----------------------
     def find_element(self,*loc):
         '''重写find_element方法，显式等待'''
+
         try:
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
             return self.driver.find_element(*loc)
         except Exception as e:
             logger.error('没定位到元素'+ str(loc))
 
+    def find_elements(self,*loc):
+        '''重写find_element方法，显式等待'''
+
+        try:
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+            return self.driver.find_elements(*loc)
+        except Exception as e:
+            logger.error('没定位到元素组'+ str(loc))
+
     def send_keys(self,value,*loc):
         try:
-            self.find_element(*loc).clear()
-            self.find_element(*loc).send_keys(value)
-        except AttributeError as  e:
+           el=self.find_element(*loc)
+           el.clear()
+           el.send_keys(value)
+        except Exception as  e:
             raise e
 
     def click_button(self,*loc):
@@ -43,33 +54,34 @@ class Base_page:
             self.find_element(*loc)
             self.find_element(*loc).click()
 
-        except AttributeError as  e:
+        except Exception as  e:
+
             raise e
 
-#---------appium-ios-----------------
+#---------appium-ios-by_ios_predicate-----------------
 
-    def find_element_ios(self, loc):
-        '''重写find_element方法，显式等待'''
-        try:
-            self.driver.implicitly_wait(10)
-            return self.driver.find_element_by_ios_predicate(loc)
-        except Exception as e:
-            logger.error('没定位到元素' + str(loc))
-
-    def send_keys_ios(self, value, loc):
-        try:
-            self.find_element_ios(loc).clear()
-            self.find_element_ios(loc).send_keys(value)
-        except AttributeError as  e:
-            raise e
-
-    def click_button_ios(self, loc):
-        try:
-            self.find_element_ios(loc)
-            self.find_element_ios(loc).click()
-
-        except AttributeError as  e:
-            raise e
+    #def find_element_ios(self, loc):
+    #     '''重写find_element方法，显式等待'''
+    #     try:
+    #         self.driver.implicitly_wait(10)
+    #         return self.driver.find_element_by_ios_predicate(loc)
+    #     except Exception as e:
+    #         logger.error('没定位到元素' + str(loc))
+    #
+    # def send_keys_ios(self, value, loc):
+    #     try:
+    #         self.find_element_ios(loc).clear()
+    #         self.find_element_ios(loc).send_keys(value)
+    #     except AttributeError as  e:
+    #         raise e
+    #
+    # def click_button_ios(self, loc):
+    #     try:
+    #         self.find_element_ios(loc)
+    #         self.find_element_ios(loc).click()
+    #
+    #     except AttributeError as  e:
+    #         raise e
 
 
 
@@ -164,7 +176,7 @@ class Base_page:
 
 
 
-#---------------------安卓------------------
+#---------------------IOS opencv------------------
 #adb shell input swipe x y x1 y1  1000  x=x1,y=y1长按/滑动 1000ms
 # adb shell input keyevent  26 or 'KEYCODE_POWER'  按power键
     #click
@@ -172,26 +184,30 @@ class Base_page:
         location=self.find_element_cv(msg,img)
         x=location[0]
         y=location[1]
-        subprocess.getoutput('adb shell input tap '+str(x)+' '+str(y))
+        t_c=touch_action.TouchAction(self.driver)
+        t_c.tap(x,y).perform()
         print('元素操作成功-->点击[' + msg + ']')
         self.driver.implicitly_wait(5)
 
     #send_keys
-    def click_and_sendkeys(self, msg,img,method,value):
+    def click_and_sendkeys(self, msg,img,value):
 
         location = self.find_element_cv(msg, img)
         x = location[0]
         y = location[1]
-        subprocess.getoutput('adb shell input tap ' + str(x) + ' ' + str(y))
+        t_c = touch_action.TouchAction(self.driver)
+        t_c.tap(x, y).perform()
         print('元素操作成功-->点击[' + msg + ']')
-        if method == '输入':
-            subprocess.getoutput('adb shell am broadcast -a ADB_INPUT_TEXT --es msg '+value)
-        else:
-            subprocess.getoutput('adb shell input text ' + value)
+        subprocess.getoutput('adb shell am broadcast -a ADB_INPUT_TEXT --es msg '+value)
         print('元素操作-->[' + msg + ']输入：'+value)
         self.driver.implicitly_wait(5)
 
-
+    def sendkeysOfIOS(self, loc, value):
+        try:
+           el = self.app.find_elements_by_class_name(loc)
+           el.send_keys(value)
+        except:
+           pass
 
     #assert
     def assertImgElement(self,msg,img):
@@ -228,7 +244,7 @@ class Base_page:
         if method == '点击':
             self.move_and_click(msg,img)
         elif method == '原生输入' or method == '输入':
-            self.click_and_sendkeys(msg,img,method,value)
+            self.click_and_sendkeys(msg,img,value)
         else:
             print(method+'输入有误，现支持点击/输入内容')
 

@@ -8,6 +8,7 @@ import datetime
 
 from UI_IOS.common.driver_configure import driver_configure
 import threading
+from UI_IOS.devices.start_ios_server import IOS_Server
 
 class RunAll():
     def __init__(self):
@@ -46,6 +47,10 @@ class RunAll():
         return test_suite
 
     def run(self):
+        #启动mac WDA appium等环境
+        server = IOS_Server()
+        server.main()
+
         suite=self.set_case_suite()
         report = REPORT_PATH + "//App_UItestReport" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
         try:
@@ -63,6 +68,8 @@ class RunAll():
 
         finally:
             logger.info("******测试结束******")
+            #清理appium  WDA环境
+            server.clear_evior()
             #e = Email(path=report)  # 发邮件
             #e.send()
 
