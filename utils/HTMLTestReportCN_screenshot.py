@@ -899,11 +899,11 @@ class _TestResult(TestResult):
         use_time = round(self.test_end_time - self.test_start_time, 2)
         self.result.append((0, test, output, '', use_time))
         if self.verbosity > 1:
-            sys.stderr.write('  S  ')
+            sys.stderr.write('  P  ')
             sys.stderr.write(str(test))
             sys.stderr.write('\n')
         else:
-            sys.stderr.write('  S  ')
+            sys.stderr.write('  P  ')
             sys.stderr.write('\n')
 
     def addError(self, test, err):
@@ -1133,9 +1133,15 @@ class HTMLTestRunner(Template_mixin):
             #     name = cls.__name__
             # else:
             #     name = "%s.%s" % (cls.__module__, cls.__name__)
-            name = cls.__name__
+            # name = cls.__name__
+
+            if cls.__module__ == "__main__":
+                name = cls.__name__
+
+            else:
+                name = "[用例模块：%s ] %s.%s" % (cls.case_name,cls.__module__, cls.__name__)
             doc = cls.__doc__ and cls.__doc__.split("\n")[0] or ""
-            # desc = doc and '%s - %s' % (name, doc) or name
+            #desc = doc and '%s - %s' % (name, doc) or name
 
             row = self.REPORT_CLASS_TMPL % dict(
                 style=ne > 0 and 'errorClass' or nf > 0 and 'failClass' or 'passClass',
@@ -1230,7 +1236,7 @@ class HTMLTestRunner(Template_mixin):
             print(screenshot_list)
             screenshot = ""
             for i in screenshot_list:
-                #图片路径文件夹名称要与截图方法里的文件夹一致
+                #图片路径文件夹名称要与截图方法里的文件夹
                 screenshot += "</br><a class=\"screenshot\" href=\"javascript:void(0)\" img=\"ErrorImage/" + i + "\">img_" + i + "</a>"
 
             # screenshot = u[u.find('errorImg[') + 9:u.find(']errorImg')]
