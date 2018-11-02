@@ -1,6 +1,7 @@
 import unittest
 import os
-from utils.HTMLTestReportCN import HTMLTestRunner
+#from utils.HTMLTestReportCN import HTMLTestRunner
+from utils.HTMLTestReportCN_screenshot import  HTMLTestRunner
 from utils.config import REPORT_PATH,UICASE_FILE
 from utils.mail import Email
 from utils.log import logger
@@ -44,13 +45,13 @@ class RunAll():
 
     def run(self):
         suite=self.set_case_suite()
-        report = REPORT_PATH + "//UItestReport" + datetime.datetime.now().strftime("%Y%m%d-%H%H%S")  + ".html"
+        report = REPORT_PATH + "//PC_UI_Report" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
         try:
 
             if suite is not None:
                 logger.info("*****开始执行测试*****")
                 with open(report,'wb') as f:
-                    runner = HTMLTestRunner(f, verbosity=2, title='UI测试报告', description='UI测试报告',tester='UI自动化测试')
+                    runner = HTMLTestRunner(f, verbosity=2, title='PC_UI测试报告', description='UI测试报告',tester='UI自动化测试',need_screenshot=0)
                     runner.run(suite)
                 f.close()
             else:

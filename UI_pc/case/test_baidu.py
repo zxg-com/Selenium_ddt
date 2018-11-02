@@ -10,7 +10,7 @@ from UI_pc.page.baidu_result_page import BaiDuResultPage
 from UI_pc.common.Basepage import BasePage
 import ddt
 import asserts
-
+from utils.HTMLTestReportCN_screenshot import Screenshot
 
 
 #excel输入数据
@@ -23,13 +23,19 @@ ecl1 = ExcelReader(excelpath, sheetname='页面url')
 class TestBaiDu(unittest.TestCase):
         case_name = '百度搜索'
 
-        @classmethod
-        def setUpClass(cls):
-
-            URL = ecl1.rowsvalue(rowname='百度首页')[1]  #excel取值
-            cls.page = BaiDuMainPage()
-            cls.page.get(URL)
+        def setUp(self):
+            URL = ecl1.rowsvalue(rowname='百度首页')[1]  # excel取值
+            self.page = BaiDuMainPage()
+            self.page.get(URL)
             logger.info("打开" + URL)
+
+        # @classmethod
+        # def setUpClass(cls):
+        #
+        #     URL = ecl1.rowsvalue(rowname='百度首页')[1]  #excel取值
+        #     cls.page = BaiDuMainPage()
+        #     cls.page.get(URL)
+        #     logger.info("打开" + URL)
             # tearDown 清理
 
         #--------selenium环境操作---------
@@ -47,17 +53,41 @@ class TestBaiDu(unittest.TestCase):
         #     asserts.assert_in('百度', self.page.get_title())
 
         #--------open-cv环境操作----------
-        def test_search(self):
-            self.page.input_keys('12345')
-            self.page.but_click()
-            self.page=BaiDuResultPage(self.page)
+        def test_search01(self):
+            try:
+                self.page.input_keys('11111')
+                self.page.but_click()
+                self.page=BaiDuResultPage(self.page)
 
-            self.page.assertImgElement(img=self.page.loc_result,msg='12345图标')
-            self.page.result_links()
-
+                self.page.assertImgElement(img=self.page.loc_result,msg='12345图标')
+                self.page.result_links()
+            except:
+                Screenshot.get_screenshot(self.page.driver)
+                raise
         @classmethod
         def tearDownClass(cls):
             cls.page.close()
+
+
+        def test_search02(self):
+            try:
+                self.page.input_keys('22222')
+                self.page.but_click()
+                self.page=BaiDuResultPage(self.page)
+
+                self.page.assertImgElement(img=self.page.loc_result,msg='12345图标')
+                self.page.result_links()
+            except:
+                Screenshot.get_screenshot(self.page.driver)
+                raise
+
+
+        def tearDown(self):
+            self.page.close()
+
+        # @classmethod
+        # def tearDownClass(cls):
+        #     cls.page.close()
 
 if __name__ == '__main__':
     unittest.main()
