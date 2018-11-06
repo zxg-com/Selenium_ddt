@@ -33,3 +33,14 @@ EVIORMENT:
   bp: 4900
   threshold_shape : 0.8
   threshold_histogram : 0.4
+
+WECHART: #企业号通知
+  corpid: wwcf07c49f733cad2f  #appid
+  corpsecret: PfiBVYx_NC1zHV5S8TBFZGQnRJ8Dai1T9Dga9jGJ0pk  #秘钥
+  agentid: 1000002      #应用id
+
+ServerInfo:
+  ip: http://47.94.81.110
+  port: 8085
+  name:
+  password:

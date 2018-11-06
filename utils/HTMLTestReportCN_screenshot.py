@@ -175,7 +175,7 @@ import sys
 import os
 import re
 from utils.config import REPORT_PATH
-from utils import drawpicture
+from utils import wechart
 # 全局变量      -- Gelomen
 _global_dict = {}
 
@@ -1044,7 +1044,7 @@ class HTMLTestRunner(Template_mixin):
         # GlobalMsg.set_value('percent_pass', self.passrate)
         # -------------------------------------------------
         #画报告缩略图存到report文件夹里面
-        drawpicture.draw_Report_Pic(self.title,(result.success_count + result.failure_count + result.error_count),result.success_count,result.failure_count,result.error_count,self.passrate)
+        wechart.draw_Report_Pic(self.title, (result.success_count + result.failure_count + result.error_count), result.success_count, result.failure_count, result.error_count, self.passrate, self.startTime.strftime("%Y%m%d-%H%M%S"))
 
         return [
             ('测试人员', self.tester),
@@ -1331,7 +1331,7 @@ class Screenshot(object):
         # img_path = img_dir + "/" + str(i) + ".png"
         tm = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
         type = ".png"
-        img_path = img_dir + str(tm) + str("_")  + str(type)
+        img_path = img_dir + str(tm)  + str(type)
 
 
         # 有可能同个测试步骤出错，截图名字一样导致覆盖文件，所以名字存在则增加id
@@ -1345,7 +1345,7 @@ class Screenshot(object):
 
         browser.get_screenshot_as_file(img_path)
         # img_name = str(i) + ".png"
-        img_name = str(tm) + str("_")  + str(type)
+        img_name = str(tm)   + str(type)
 
         # browser_type = browser.capabilities["browserName"]
         # browser_version = '0.1'

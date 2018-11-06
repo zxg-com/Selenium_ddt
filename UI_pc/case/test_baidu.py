@@ -70,7 +70,7 @@ class TestBaiDu(unittest.TestCase):
             raise
 
 
-    @unittest.skip("跳过原因")
+    #@unittest.skip("跳过原因")
     def test_search02(self):
         ''''搜索文字'''
         try:

@@ -58,7 +58,7 @@ class RunAll():
             if suite is not None:
                 logger.info("*****开始执行测试*****")
                 with open(report,'wb') as fp:
-                    runner = HTMLTestRunner(fp, verbosity=2, title='安卓UI测试报告', description='APP_UI测试报告',tester='UI自动化测试',need_screenshot=0)
+                    runner = HTMLTestRunner(fp, verbosity=2, title='ANDROID_UI_ITEMNAME', description='APP_UI测试报告',tester='UI自动化测试',need_screenshot=0)
                     runner.run(suite)
                 fp.close()
             else:
