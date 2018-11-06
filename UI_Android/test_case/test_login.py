@@ -13,6 +13,7 @@ from utils.HTMLTestReportCN_screenshot import Screenshot
 
 
 class test_appium(unittest.TestCase):
+    '''登录功能'''
     case_name = "正常登录"
     @classmethod
     def setUpClass(cls):
@@ -22,6 +23,7 @@ class test_appium(unittest.TestCase):
 
 
     def test_login(self):
+        '''输入正确的用户名密码'''
         #----appium定位---
 
         # self.page.always_allow()

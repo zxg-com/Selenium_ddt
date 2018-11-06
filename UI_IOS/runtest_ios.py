@@ -52,7 +52,7 @@ class RunAll():
         server.main()
 
         suite=self.set_case_suite()
-        report = REPORT_PATH + "//App_IOS_Report" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
+        report = REPORT_PATH + "//IOS端UI测试报告" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
         try:
 
             if suite is not None:

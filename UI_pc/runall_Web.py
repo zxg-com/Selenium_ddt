@@ -45,13 +45,13 @@ class RunAll():
 
     def run(self):
         suite=self.set_case_suite()
-        report = REPORT_PATH + "//PC_UI_Report" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
+        report = REPORT_PATH + "//PC端UI测试报告" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
         try:
 
             if suite is not None:
                 logger.info("*****开始执行测试*****")
                 with open(report,'wb') as f:
-                    runner = HTMLTestRunner(f, verbosity=2, title='PC_UI测试报告', description='UI测试报告',tester='UI自动化测试',need_screenshot=0)
+                    runner = HTMLTestRunner(f, verbosity=2, title='PC端UI测试报告', description='UI测试报告',tester='UI自动化测试',need_screenshot=0)
                     runner.run(suite)
                 f.close()
             else:

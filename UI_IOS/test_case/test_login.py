@@ -11,6 +11,7 @@ from utils.HTMLTestReportCN_screenshot import Screenshot
 
 
 class test_appium(unittest.TestCase):
+    '''登录功能'''
     case_name = "正常登录"
     @classmethod
     def setUpClass(cls):

@@ -21,6 +21,7 @@ case_name='百度搜索'
 
 @ddt.ddt
 class TestBaiDu(unittest.TestCase):
+    '''搜索功能'''
     case_name = '百度搜索'
 
 
@@ -56,7 +57,7 @@ class TestBaiDu(unittest.TestCase):
 
     #--------open-cv环境操作----------
     def test_search01(self):
-        des= '搜索数字'
+        '''搜索数字'''
         try:
             self.page.input_keys('12345')
             self.page.but_click()
@@ -69,9 +70,9 @@ class TestBaiDu(unittest.TestCase):
             raise
 
 
-
+    @unittest.skip("跳过原因")
     def test_search02(self):
-        des = '搜索文字'
+        ''''搜索文字'''
         try:
             self.page.input_keys('测试')
             self.page.but_click()
