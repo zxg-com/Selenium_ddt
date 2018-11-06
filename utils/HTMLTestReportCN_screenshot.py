@@ -66,10 +66,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
 # URL: https://github.com/Gelomen/HTMLTestReportCN-ScreenShot
 
-__author__ = "Wai Yip Tung,  Findyou,  boafantasy,  Gelomen"
-__version__ = "1.2.0"
+
+
+
 
 """
+修改截图功能 -- zxg
+添加画缩略图功能 --zxg
+
+
 Change History
 Version 1.2.0 -- Gelomen
 * 优化用例说明显示
@@ -170,7 +175,7 @@ import sys
 import os
 import re
 from utils.config import REPORT_PATH
-
+from utils import drawpicture
 # 全局变量      -- Gelomen
 _global_dict = {}
 
@@ -1008,6 +1013,7 @@ class HTMLTestRunner(Template_mixin):
             status.append('失败 %s' % result.failure_count)
         if result.error_count:
             status.append('错误 %s' % result.error_count)
+
         if status:
             status = '，'.join(status)
             if (result.success_count + result.failure_count + result.error_count) > 0:
@@ -1018,6 +1024,7 @@ class HTMLTestRunner(Template_mixin):
         else:
             status = 'none'
 
+
         if len(result.failCase) > 0:
             failCase = result.failCase
         else:
@@ -1027,6 +1034,17 @@ class HTMLTestRunner(Template_mixin):
             errorCase = result.errorCase
         else:
             errorCase = "无"
+
+        # ----------------- #画报告缩略图使用-----------------
+        # GlobalMsg.set_value('title', self.title)
+        # GlobalMsg.set_value('totle_num', (result.success_count + result.failure_count + result.error_count))
+        # GlobalMsg.set_value('pass_num', result.success_count)
+        # GlobalMsg.set_value('fail_num', result.failure_count)
+        # GlobalMsg.set_value('erro_num', result.error_count)
+        # GlobalMsg.set_value('percent_pass', self.passrate)
+        # -------------------------------------------------
+        #画报告缩略图存到report文件夹里面
+        drawpicture.draw_Report_Pic(self.title,(result.success_count + result.failure_count + result.error_count),result.success_count,result.failure_count,result.error_count,self.passrate)
 
         return [
             ('测试人员', self.tester),
@@ -1039,7 +1057,7 @@ class HTMLTestRunner(Template_mixin):
 
     def generateReport(self, test, result):
         report_attrs = self.getReportAttributes(result)
-        generator = 'HTMLTestRunner %s' % __version__
+        generator = 'HTMLTestRunner'
         stylesheet = self._generate_stylesheet()
         # 添加 通过、失败 和 错误 的统计，以用于饼图  -- Gelomen
         Pass = self._generate_report(result)["Pass"]
@@ -1129,17 +1147,17 @@ class HTMLTestRunner(Template_mixin):
             ns = round(ns, 2)
             sum_ns += ns  # 把所有用例的每次耗时相加
             # format class description
-            # if cls.__module__ == "__main__":
-            #     name = cls.__name__
-            # else:
-            #     name = "%s.%s" % (cls.__module__, cls.__name__)
-            # name = cls.__name__
-
             if cls.__module__ == "__main__":
                 name = cls.__name__
-
             else:
-                name = "[用例模块：%s ] %s.%s" % (cls.case_name,cls.__module__, cls.__name__)
+                name = "%s.%s" % (cls.__module__, cls.__name__)
+            # name = cls.__name__
+
+            # if cls.__module__ == "__main__":
+            #     name = cls.__name__
+            #
+            # else:
+            #     name = "[用例模块：%s ] %s.%s" % (cls.case_name,cls.__module__, cls.__name__)
             doc = cls.__doc__ and cls.__doc__.split("\n")[0] or ""
             #desc = doc and '%s - %s' % (name, doc) or name
 
