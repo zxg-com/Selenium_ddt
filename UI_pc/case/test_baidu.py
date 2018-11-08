@@ -10,7 +10,7 @@ from UI_pc.page.baidu_result_page import BaiDuResultPage
 from UI_pc.common.Basepage import BasePage
 import ddt
 import asserts
-from utils.HTMLTestReportCN_screenshot import Screenshot
+
 
 
 #excel输入数据
@@ -56,6 +56,7 @@ class TestBaiDu(unittest.TestCase):
     #     asserts.assert_in('百度', self.page.get_title())
 
     #--------open-cv环境操作----------
+    @unittest.skip('测试跳过')
     def test_search01(self):
         '''搜索数字'''
         try:
@@ -65,8 +66,9 @@ class TestBaiDu(unittest.TestCase):
 
             self.page.assertImgElement(img=self.page.loc_result,msg='12345图标')
             self.page.result_links()
+
         except:
-            Screenshot.get_screenshot(self.page.driver)
+            #Screenshot.get_screenshot(self.page.driver)
             raise
 
 
@@ -81,7 +83,8 @@ class TestBaiDu(unittest.TestCase):
             self.page.assertImgElement(img=self.page.loc_result,msg='12345图标')
             self.page.result_links()
         except:
-            Screenshot.get_screenshot(self.page.driver)
+            #Screenshot.get_screenshot(self.page.driver)
+            self.screenshot = self.page.driver.get_screenshot_as_base64()
             raise
 
 
