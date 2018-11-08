@@ -1,170 +1,6 @@
 # coding=utf-8
-"""
-A TestRunner for use with the Python unit testing framework. It
-generates a HTML report to show the result at a glance.
-
-The simplest way to use this is to invoke its main method. E.g.
-
-    import unittest
-    import HTMLTestRunner
-
-    ... define your tests ...
-
-    if __name__ == '__main__':
-        HTMLTestRunner.main()
-
-
-For more customization options, instantiates a HTMLTestRunner object.
-HTMLTestRunner is a counterpart to unittest's TextTestRunner. E.g.
-
-    # output to a file
-    fp = file('my_report.html', 'wb')
-    runner = HTMLTestRunner.HTMLTestRunner(
-                stream=fp,
-                title='My unit test',
-                description='This demonstrates the report output by HTMLTestRunner.'
-                )
-
-    # Use an external stylesheet.
-    # See the Template_mixin class for more customizable options
-    runner.STYLESHEET_TMPL = '<link rel="stylesheet" href="my_stylesheet.css" type="text/css">'
-
-    # run the test
-    runner.run(my_test_suite)
-
-
-------------------------------------------------------------------------
-Copyright (c) 2004-2007, Wai Yip Tung
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are
-met:
-
-* Redistributions of source code must retain the above copyright notice,
-  this list of conditions and the following disclaimer.
-* Redistributions in binary form must reproduce the above copyright
-  notice, this list of conditions and the following disclaimer in the
-  documentation and/or other materials provided with the distribution.
-* Neither the name Wai Yip Tung nor the names of its contributors may be
-  used to endorse or promote products derived from this software without
-  specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
-IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
-TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
-OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
-LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-"""
-
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
 # URL: https://github.com/Gelomen/HTMLTestReportCN-ScreenShot
-
-
-
-
-
-"""
-修改截图功能 -- zxg
-添加画缩略图功能 --zxg
-
-
-Change History
-Version 1.2.0 -- Gelomen
-* 优化用例说明显示
-* 错误和失败报告里可以放入多张截图
-
-Version 1.1.0 -- Gelomen
-* 优化报告截图写入方式
-
-Version 1.0.2 -- Gelomen
-* 新增测试结果统计饼图
-* 优化筛选时只显示预览
-
-Version 1.0.1 -- Gelomen
-* 修复报告存入文件夹的bug
-* 优化报告的命名方式
-
-Version 1.0.0 -- Gelomen
-* 修改测试报告文件夹路径的获取方式
-* 修改截图获取文件夹路径的获取方式
-
-Version 0.9.9 -- Gelomen
-* 优化报告文件夹命名
-* 优化截图存放的目录
-* 增加图片阴影边框以突出图片
-* 优化 失败用例合集 和 错误用例合集 显示的颜色
-
-Version 0.9.8 -- Gelomen
-* 优化回到顶部按钮的显示方式
-
-Version 0.9.7 -- Gelomen
-* 优化截图显示，滚动页面会固定居中
-
-Version 0.9.6 -- Gelomen
-* 新增打开图片的特效，可以直接在当前页面看截图
-
-Version 0.9.5 -- Gelomen
-* heading新增 失败 和 错误 测试用例合集
-
-Version 0.9.4 -- Gelomen
-* 修复失败和错误用例里对应按钮的颜色
-
-Version 0.9.3 -- Gelomen
-* 修复点击失败或错误按钮后，浏览器版本和截图的列不会隐藏的bug
-
-Version 0.9.2 -- Gelomen
-* 美化 浏览器版本 和 截图 的显示
-
-Version 0.9.1 -- Gelomen
-* 使用UI自动化测试时，增加 错误、失败 详细信息的 浏览器类型和版本
-
-Version 0.9.0 -- Gelomen
-* 可通过 `need_screenshot=1` 作为开关，将报告开启截图功能
-* 增加 失败 和 错误 详细信息的 截图链接
-
-Version 0.8.4 -- Gelomen
-* 删除 失败模块 的显示
-
-Version 0.8.3 -- Gelomen
-* 修复 测试结果 的筛选
-* 优化 失败、错误 小图标的颜色
-* 增加表格 最后一列 的显示，以美化表格
-
-Version 0.8.2.1 -Findyou
-* 改为支持python3
-
-Version 0.8.2.1 -Findyou
-* 支持中文，汉化
-* 调整样式，美化（需要连入网络，使用的百度的Bootstrap.js）
-* 增加 通过分类显示、测试人员、通过率的展示
-* 优化“详细”与“收起”状态的变换
-* 增加返回顶部的锚点
-
-Version 0.8.2
-* Show output inline instead of popup window (Viorel Lupu).
-
-Version in 0.8.1
-* Validated XHTML (Wolfgang Borgert).
-* Added description of test classes and test cases.
-
-Version in 0.8.0
-* Define Template_mixin class for customization.
-* Workaround a IE 6 bug that it does not treat <script> block as CDATA.
-
-Version in 0.7.1
-* Back port to Python 2.3 (Frank Horowitz).
-* Fix missing scroll bars in detail log (Podi).
-"""
-
-# TODO: color stderr
-# TODO: simplify javascript using ,ore than 1 class in the class attribute?
 
 import datetime
 import io
@@ -196,19 +32,6 @@ class GlobalMsg(object):
             return _global_dict[name]
         except KeyError:
             return None
-
-
-# ------------------------------------------------------------------------
-# The redirectors below are used to capture output during testing. Output
-# sent to sys.stdout and sys.stderr are automatically captured. However
-# in some cases sys.stdout is already cached before HTMLTestRunner is
-# invoked (e.g. calling logging.basicConfig). In order to capture those
-# output, use the redirectors for the cached stream.
-#
-# e.g.
-#   >>> logging.basicConfig(stream=HTMLTestRunner.stdout_redirector)
-#   >>>
-
 
 class OutputRedirector(object):
     """ Wrapper to redirect stdout or stderr """
@@ -526,6 +349,15 @@ function showCase(level) {
 	}
 }
 
+function show_shots(obj) {
+	obj.nextElementSibling.style.display="block";
+
+}
+
+function close_shots(obj) {
+	obj.parentElement.style.display="none";
+}
+
 function showClassDetail(cid, count) {
     var id_list = Array(count);
     var toHide = 1;
@@ -611,6 +443,27 @@ table       { font-size: 100%; }
 /* --- 打开截图特效样式 -- Gelomen --- */
 .data-img{
     cursor:pointer
+}
+
+.img{
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+    border: 2px solid #777;
+}
+
+.screenshots {
+    z-index: 100;
+	position:absolute;
+	left: 23%;
+	top: 20%;
+	display: none;
+}
+.close_shots {
+	position:absolute;
+	top:0; left:98%;
+	z-index:99;
+	width:20px;
 }
 
 .pic_looper{
@@ -699,7 +552,7 @@ table       { font-size: 100%; }
     # ------------------------------------------------------------------------
     # Report
     #
-    # 汉化,加美化效果 --Findyou
+    # 汉化,加美化效果
     REPORT_TMPL = """
 <div style="width: 500px; clear: both;">
 <p id='show_detail_line'>
@@ -757,17 +610,17 @@ table       { font-size: 100%; }
 </tr>
 """  # variables: (style, desc, count, Pass, fail, error, cid)
 
-    # 失败 的样式，去掉原来JS效果，美化展示效果  -Findyou / 美化类名上下居中，有截图列 -- Gelomen
+    # 失败 的样式，去掉原来JS效果，美化展示效果   / 美化类名上下居中，有截图列
     REPORT_TEST_WITH_OUTPUT_TMPL_1 = r"""
 <tr id='%(tid)s' class='%(Class)s'>
     <td class='%(style)s' style="vertical-align: middle"><div class='testcase'>%(name)s</div></td>
     <td style="vertical-align: middle">%(doc)s</td>
     <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
+    <!--默认收起错误信息 -->
     <button id='btn_%(tid)s' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
     <div id='div_%(tid)s' class="collapse">  -->
 
-    <!-- 默认展开错误信息 -Findyou /  修复失败按钮的颜色 -- Gelomen -->
+    <!-- 默认展开错误信息 /  修复失败按钮的颜色 -->
     <button id='btn_%(tid)s' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_%(tid)s,#div_%(tid)s_screenshot'>%(status)s</button>
     <div id='div_%(tid)s' class="collapse in">
     <pre style="text-align:left">
@@ -775,11 +628,12 @@ table       { font-size: 100%; }
     </pre>
     </div>
     </td>
-    <td class="text-center" style="vertical-align: middle"><div id='div_%(tid)s_screenshot' class="collapse in"><div style="color: brown;">%(browser)s</div></br>截图：%(screenshot)s</div></td>
+    <!-- 截图列 -->
+    <td>%(screenshot)s</td>
 </tr>
 """  # variables: (tid, Class, style, desc, status)
 
-    # 失败 的样式，去掉原来JS效果，美化展示效果  -Findyou / 美化类名上下居中，无截图列 -- Gelomen
+    # 失败 的样式，去掉原来JS效果，美化展示效果
     REPORT_TEST_WITH_OUTPUT_TMPL_0 = r"""
     <tr id='%(tid)s' class='%(Class)s'>
         <td class='%(style)s' style="vertical-align: middle"><div class='testcase'>%(name)s</div></td>
@@ -801,7 +655,7 @@ table       { font-size: 100%; }
     </tr>
     """  # variables: (tid, Class, style, desc, status)
 
-    # 通过 的样式，加标签效果  -Findyou / 美化类名上下居中 -- Gelomen
+    # 通过 的样式，加标签效果  -Findyou / 美化类名上下居中
     REPORT_TEST_NO_OUTPUT_TMPL = r"""
 <tr id='%(tid)s' class='%(Class)s'>
     <td class='%(style)s' style="vertical-align: middle"><div class='testcase'>%(name)s</div></td>
@@ -813,12 +667,8 @@ table       { font-size: 100%; }
 
     REPORT_TEST_OUTPUT_TMPL = r"""
 %(id)s: %(output)s
-"""  # variables: (id, output)
-
-    # ------------------------------------------------------------------------
-    # ENDING
-    #
-    # 增加返回顶部按钮  --Findyou
+"""
+    # 增加返回顶部按钮
     ENDING_TMPL = """<div id='ending'>&nbsp;</div>
     <div id="toTop" style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer; display: none">
     <a><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
@@ -868,6 +718,7 @@ class _TestResult(TestResult):
         # stream.flush()
         # stream.write("\n")
         TestResult.startTest(self, test)
+        test.screenshot=""
         # just one buffer for both stdout and stderr
         self.outputBuffer = io.StringIO()
         stdout_redirector.fp = self.outputBuffer
@@ -918,6 +769,8 @@ class _TestResult(TestResult):
         output = self.complete_output()
         use_time = round(self.test_end_time - self.test_start_time, 2)
         self.result.append((2, test, output, _exc_str, use_time))
+
+
         if self.verbosity > 1:
             sys.stderr.write('  E  ')
             sys.stderr.write(str(test))
@@ -936,6 +789,14 @@ class _TestResult(TestResult):
         output = self.complete_output()
         use_time = round(self.test_end_time - self.test_start_time, 2)
         self.result.append((1, test, output, _exc_str, use_time))
+        # try:
+        #     driver = getattr(test, "page").driver
+        #     test.screenshot = driver.get_screenshot_as_base64()
+        #     print(test.screenshot)
+        # except AttributeError:
+        #     test.screenshot = ""
+
+
         if self.verbosity > 1:
             sys.stderr.write('  F  ')
             sys.stderr.write(str(test))
@@ -1083,8 +944,8 @@ class HTMLTestRunner(Template_mixin):
     def _generate_stylesheet(self):
         return self.STYLESHEET_TMPL
 
-    # 增加Tester显示 -Findyou
-    # 增加 失败用例合集 和 错误用例合集 的显示  -- Gelomen
+    # 增加Tester显示
+    # 增加 失败用例合集 和 错误用例合集 的显示
     def _generate_heading(self, report_attrs):
         a_lines = []
         for name, value in report_attrs:
@@ -1127,7 +988,7 @@ class HTMLTestRunner(Template_mixin):
         )
         return heading
 
-    # 生成报告  --Findyou添加注释
+    # 生成报告  --添加注释
     def _generate_report(self, result):
         rows = []
         sortedResult = self.sortResult(result.result)
@@ -1196,7 +1057,7 @@ class HTMLTestRunner(Template_mixin):
     def _generate_report_test(self, rows, cid, tid, n, t, o, e):
         # e.g. 'pt1_1', 'ft1_1', 'et1_1'etc
         has_output = bool(o or e)
-        # ID修改点为下划线,支持Bootstrap折叠展开特效 - Findyou
+        # ID修改点为下划线,支持Bootstrap折叠展开特效
         if n == 0:
             tid_flag = 'p'
         elif n == 1:
@@ -1230,14 +1091,13 @@ class HTMLTestRunner(Template_mixin):
             output=saxutils.escape(uo + ue),
         )
 
-        # 截图名字通过抛出异常存放在u，通过截取字段获得截图名字  -- Gelomen
+
         u = uo + ue
         # 先判断是否需要截图
-        self.need_screenshot = u.find("errorImg[")
+
 
         if self.need_screenshot == -1:
             tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL_0 or self.REPORT_TEST_NO_OUTPUT_TMPL
-
             row = tmpl % dict(
                 tid=tid,
                 Class=(n == 0 and 'hiddenRow' or 'none'),
@@ -1245,34 +1105,77 @@ class HTMLTestRunner(Template_mixin):
                 name=name,
                 doc=doc,
                 script=script,
-                status=self.STATUS[n],
-            )
+                status=self.STATUS[n],)
         else:
             tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL_1 or self.REPORT_TEST_NO_OUTPUT_TMPL
-
-            screenshot_list = re.findall("errorImg\[(.*?)\]errorImg", u)
-            print(screenshot_list)
-            screenshot = ""
-            for i in screenshot_list:
-                #图片路径文件夹名称要与截图方法里的文件夹
-                screenshot += "</br><a class=\"screenshot\" href=\"javascript:void(0)\" img=\"ErrorImage/" + i + "\">img_" + i + "</a>"
-
-            # screenshot = u[u.find('errorImg[') + 9:u.find(']errorImg')]
-            browser = u[u.find('browser[') + 8:u.find(']browser')]
-
+            # screenshot_list = t.screenshots
+            # screenshot = ""
+            # for i in screenshot_list:
+            #     screenshot += u"""
+            #                     <a href="#" onclick="show_shots(this)">显示截图</a>
+            #                     <div class="screenshots">
+            #                     <a  class="close_shots" onclick="close_shots(this)">X</a>
+            #                     <img src="data:image/jpg;base64,%s" class="img"/>
+            #                     </div>""" % i
+            if t.screenshot:
+                screenshot = u"""
+                <a href="#" onclick="show_shots(this) ">显示截图</a>
+                <div class="screenshots">
+                <a  class="close_shots" onclick="close_shots(this)">X</a>
+                <img src="data:image/jpg;base64,%s" class="img"/>
+                </div>""" % t.screenshot
+            else:
+                screenshot = """"""
             row = tmpl % dict(
-                tid=tid,
-                Class=(n == 0 and 'hiddenRow' or 'none'),
-                style=n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'passCase'),
-                name=name,
-                doc=doc,
-                script=script,
-                status=self.STATUS[n],
-                # 添加截图字段
-                screenshot=screenshot,
-                # 添加浏览器版本字段
-                browser=browser
+                    tid=tid,
+                    Class=(n == 0 and 'hiddenRow' or 'none'),
+                    style=n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'passCase'),
+                    name=name,
+                    doc=doc,
+                    script=script,
+                    status=self.STATUS[n],
+                    # 添加截图字段
+                    screenshot=screenshot
             )
+
+        # self.need_screenshot = u.find("errorImg[")
+        #
+        # if self.need_screenshot == -1:
+        #     tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL_0 or self.REPORT_TEST_NO_OUTPUT_TMPL
+        #
+        #     row = tmpl % dict(
+        #         tid=tid,
+        #         Class=(n == 0 and 'hiddenRow' or 'none'),
+        #         style=n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'passCase'),
+        #         name=name,
+        #         doc=doc,
+        #         script=script,
+        #         status=self.STATUS[n],
+        #     )
+        # else:
+        #     tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL_1 or self.REPORT_TEST_NO_OUTPUT_TMPL
+        #
+        #     screenshot_list = re.findall("errorImg\[(.*?)\]errorImg", u)
+        #     print(screenshot_list)
+        #     screenshot = ""
+        #     for i in screenshot_list:
+        #         #图片路径文件夹名称要与截图方法里的文件夹
+        #         screenshot += "</br><a class=\"screenshot\" href=\"javascript:void(0)\" img=\"ErrorImage/" + i + "\">img_" + i + "</a>"
+        #     browser = u[u.find('browser[') + 8:u.find(']browser')]
+        #
+        #     row = tmpl % dict(
+        #         tid=tid,
+        #         Class=(n == 0 and 'hiddenRow' or 'none'),
+        #         style=n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'passCase'),
+        #         name=name,
+        #         doc=doc,
+        #         script=script,
+        #         status=self.STATUS[n],
+        #         # 添加截图字段
+        #         screenshot=screenshot,
+        #         # 添加浏览器版本字段
+        #         browser=browser
+        #     )
         rows.append(row)
 
         if not has_output:
@@ -1282,7 +1185,7 @@ class HTMLTestRunner(Template_mixin):
         return self.ENDING_TMPL
 
 
-# 集成创建文件夹、保存截图、获得截图名字等方法，与HTMLTestReportCN交互从而实现嵌入截图  -- Gelomen
+# 集成创建文件夹、保存截图、获得截图名字等方法，与HTMLTestReportCN交互从而实现嵌入截图  -- 暂时不用了，直接用base64位来存储，外网能访问
 class Screenshot(object):
     def __init__(self):
         self.path = "../../result/"
