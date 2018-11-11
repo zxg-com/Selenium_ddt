@@ -6,7 +6,6 @@ description:测试登录和退出功能
 import unittest
 from UI_IOS.pages import login_page
 import time
-from utils.HTMLTestReportCN_screenshot import Screenshot
 
 
 
@@ -30,7 +29,7 @@ class test_appium(unittest.TestCase):
             self.page.input_Pws("111111")
             self.page.click_login()
         except:
-            Screenshot.get_screenshot(self.page.driver)
+            self.screenshot = self.page.driver.get_screenshot_as_base64()
             raise
 
 

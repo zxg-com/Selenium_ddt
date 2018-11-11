@@ -18,7 +18,7 @@ class BaiDuResultPage(BasePage):
     loc_result = os.path.join(Img_path_cv, item, page, element1 + '.png')
     def result_links(self):
 
-        print("啊啊啊")
+        print("进入结果页")
 
 
 

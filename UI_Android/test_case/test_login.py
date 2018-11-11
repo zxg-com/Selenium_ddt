@@ -7,7 +7,6 @@ import unittest
 
 from UI_Android.pages import login_page,initpage,init_page
 import time
-from utils.HTMLTestReportCN_screenshot import Screenshot
 
 
 
@@ -52,7 +51,7 @@ class test_appium(unittest.TestCase):
             #断言
             self.page.assertImgElement('立即更新按钮',self.page.loc_update_btn)
         except:
-            Screenshot.get_screenshot(self.page.driver)
+            self.screenshot = self.page.driver.get_screenshot_as_base64()
             raise
     @classmethod
     def tearDownClass(cls):

@@ -454,16 +454,20 @@ table       { font-size: 100%; }
 
 .screenshots {
     z-index: 100;
-	position:absolute;
-	left: 23%;
-	top: 20%;
-	display: none;
+	z-index: 100;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    display: none;
+    transform: translate(-50%,-50%);
 }
 .close_shots {
 	position:absolute;
 	top:0; left:98%;
 	z-index:99;
-	width:20px;
+	width:60px;
+	height:60px;
+	
 }
 
 .pic_looper{
@@ -618,10 +622,9 @@ table       { font-size: 100%; }
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -->
     <button id='btn_%(tid)s' type="button"  class="btn btn-xs collapsed" data-toggle="collapse" data-target='#div_%(tid)s'>%(status)s</button>
-    <div id='div_%(tid)s' class="collapse">  -->
+    <div id='div_%(tid)s' class="collapse">  
 
-    <!-- 默认展开错误信息 /  修复失败按钮的颜色 -->
-    <button id='btn_%(tid)s' type="button"  class="btn btn-xs" data-toggle="collapse" data-target='#div_%(tid)s,#div_%(tid)s_screenshot'>%(status)s</button>
+    <!-- 默认展开错误信息  -->
     <div id='div_%(tid)s' class="collapse in">
     <pre style="text-align:left">
     %(script)s
@@ -1119,7 +1122,7 @@ class HTMLTestRunner(Template_mixin):
             #                     </div>""" % i
             if t.screenshot:
                 screenshot = u"""
-                <a href="#" onclick="show_shots(this) ">显示截图</a>
+                <a href="#" onclick="show_shots(this)" style="display: block; text-align: center;">显示截图</a>
                 <div class="screenshots">
                 <a  class="close_shots" onclick="close_shots(this)">X</a>
                 <img src="data:image/jpg;base64,%s" class="img"/>

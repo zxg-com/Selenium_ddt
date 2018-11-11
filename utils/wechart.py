@@ -121,5 +121,5 @@ def sendmsg(test_title,pic_Nmae,report_name,start_time):
 
 if __name__ == '__main__':
 
-    sendmsg("接口/xx端UI自动化测试报告",'aaa.png','PC端UI测试报告20181106-155534.html','12345')
+    sendmsg("接口/xx端UI自动化测试报告",'aaa.png','PC端UI测试报告20181109-100022.html','12345')
 
