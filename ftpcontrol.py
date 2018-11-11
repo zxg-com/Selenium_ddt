@@ -13,13 +13,14 @@ def upload(remotepath, localpath):
     # ftp.set_debuglevel(2)
     ftp.connect("47.94.81.110",21)
     ftp.login()
-    print(ftp.nlst() )
+    ftp.set_pasv(False)  # 被动模式能上传成功，不设置总是超时
+    #print(ftp.nlst() )
     bufsize = 1024
     fp = open(localpath, 'rb')
     ftp.storbinary('STOR %s' % remotepath, fp, bufsize)
     fp.close()
     ftp.quit()
-    ftp.welcome()
+
 
 
 if __name__ == '__main__':
