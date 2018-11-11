@@ -6,6 +6,7 @@ from utils.config import REPORT_PATH,UICASE_FILE
 from utils.mail import Email
 from utils.log import logger
 import datetime
+from utils import ftpcontrol,wechart
 
 class RunAll():
     def __init__(self):
@@ -45,13 +46,15 @@ class RunAll():
 
     def run(self):
         suite=self.set_case_suite()
-        report = REPORT_PATH + "//PC端UI测试报告" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
+        start_time=datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+        report_title="PC_UI_allinmd"
+        report = REPORT_PATH + "/"+report_title + start_time + ".html"
         try:
 
             if suite is not None:
                 logger.info("*****开始执行测试*****")
                 with open(report,'wb') as f:
-                    runner = HTMLTestRunner(f, verbosity=2, title='PC_UI_ITEMNAME', description='UI测试报告',tester='UI自动化测试',need_screenshot=0)
+                    runner = HTMLTestRunner(f, verbosity=2, title=report_title, description='UI测试报告',tester='UI自动化测试',need_screenshot=0)
                     runner.run(suite)
                 f.close()
             else:
@@ -63,6 +66,11 @@ class RunAll():
             logger.info("******测试结束******")
             #e = Email(path=report)  # 发邮件
             #e.send()
+            #ftp上传报告文件和缩略图
+            ftpcontrol.upload(localpath=report,remotepath=report_title + start_time + ".html")
+            ftpcontrol.upload(localpath=REPORT_PATH+"/thumbnail_img/"+report_title+start_time+'.png',remotepath="/picture/"+report_title+start_time+'.png')
+            #发送微信企业通知
+            wechart.sendmsg(test_title=report_title,pic_Nmae=report_title+start_time+'.png',report_name=report_title + start_time + ".html",start_time=start_time)
 
 if __name__ == '__main__':
     RunAll().run()

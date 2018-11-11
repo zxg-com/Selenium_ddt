@@ -39,8 +39,9 @@ WECHART: #企业号通知
   corpsecret: PfiBVYx_NC1zHV5S8TBFZGQnRJ8Dai1T9Dga9jGJ0pk  #秘钥
   agentid: 1000002      #应用id
 
+
 ServerInfo:
-  ip: http://47.94.81.110
+  ip: 47.94.81.110
   port: 8085
   name:
   password:

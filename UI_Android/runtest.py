@@ -8,6 +8,7 @@ import datetime
 from UI_Android.devices.server import Server
 from UI_Android.common.driver_configure import driver_configure
 import threading
+from utils import ftpcontrol,wechart
 
 class RunAll():
     def __init__(self):
@@ -50,17 +51,19 @@ class RunAll():
         server = Server()
         server.main()
 
-
-        suite=self.set_case_suite()
-        report = REPORT_PATH + "//安卓端UI测试报告" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")  + ".html"
+        suite = self.set_case_suite()
+        start_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+        report_title = "Andriod_UI_allinmd"
+        report = REPORT_PATH + "/" + report_title + start_time + ".html"
         try:
 
             if suite is not None:
                 logger.info("*****开始执行测试*****")
-                with open(report,'wb') as fp:
-                    runner = HTMLTestRunner(fp, verbosity=2, title='ANDROID_UI_ITEMNAME', description='APP_UI测试报告',tester='UI自动化测试',need_screenshot=0)
+                with open(report, 'wb') as f:
+                    runner = HTMLTestRunner(f, verbosity=2, title=report_title, description='UI测试报告', tester='UI自动化测试',
+                                            need_screenshot=0)
                     runner.run(suite)
-                fp.close()
+                f.close()
             else:
                 logger.error("error：*****没发现测试用例*****")
         except Exception as ex:
@@ -68,8 +71,16 @@ class RunAll():
 
         finally:
             logger.info("******测试结束******")
-            #e = Email(path=report)  # 发邮件
-            #e.send()
+            # e = Email(path=report)  # 发邮件
+            # e.send()
+            # ftp上传报告文件和缩略图
+            ftpcontrol.upload(localpath=report, remotepath=report_title + start_time + ".html")
+            ftpcontrol.upload(localpath=REPORT_PATH + "/thumbnail_img/" + report_title + start_time + '.png',
+                              remotepath="/picture/" + report_title + start_time + '.png')
+            # 发送微信企业通知
+            wechart.sendmsg(test_title=report_title, pic_Nmae=report_title + start_time + '.png',
+                            report_name=report_title + start_time + ".html", start_time=start_time)
+
 
 if __name__ == '__main__':
     r=RunAll()

@@ -38,7 +38,7 @@ def draw_Report_Pic(title,case_num,pass_num,fail_num,err_num,percent_pass,startt
     draw.text((573, 331), errnum, font=setFont, fill=(255,255,255)) #错误数
     draw.text((540, 392), percent, font=setFont, fill=(255,255,255))  #通过率
     #存入report-缩略图文件夹路径
-    image.save(REPORT_PATH+'/thumbnail_img/'+title+'_'+start_time+'.png','PNG')
+    image.save(REPORT_PATH+'/thumbnail_img/'+title+start_time+'.png','PNG')
 
 
 
@@ -100,8 +100,8 @@ def sendmsg(test_title,pic_Nmae,report_name,start_time):
                     {
                         "title": title,
                         "description": "报告时间:"+starttime,
-                        "url":server_ip+':'+port+'/'+reportname, #html文件地址即可
-                        "picurl": server_ip+':'+port+"/picture/"+picNmae  #画图，上传ftp
+                        "url":'http://'+server_ip+':'+port+'/'+reportname, #html文件地址即可
+                        "picurl": 'http://'+server_ip+':'+port+"/picture/"+picNmae  #画图，上传ftp
                     }
                 ]
             }
@@ -119,7 +119,7 @@ def sendmsg(test_title,pic_Nmae,report_name,start_time):
 
 
 
-if __name__ == '__main__':
-
-    sendmsg("接口/xx端UI自动化测试报告",'aaa.png','PC端UI测试报告20181109-100022.html','12345')
+# if __name__ == '__main__':
+#
+#     sendmsg("接口/xx端UI自动化测试报告",'aaa.png','PC端UI测试报告20181109-100022.html','12345')
 
