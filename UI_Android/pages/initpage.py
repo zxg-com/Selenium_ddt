@@ -1,3 +1,4 @@
+# coding:utf-8
 import os
 from UI_Android.common.Base_page import Base_page
 from utils.config import Img_path_cv

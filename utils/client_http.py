@@ -1,3 +1,4 @@
+#coding = utf-8
 """
 API
 添加用于接口测试的client，对于HTTP接口添加HTTPClient，发送http请求。

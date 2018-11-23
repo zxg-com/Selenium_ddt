@@ -1,3 +1,4 @@
+#coding = utf-8
 #  页面元素集，操作元素的方法
 import time
 import os

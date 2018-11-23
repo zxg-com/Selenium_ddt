@@ -1,4 +1,4 @@
-
+#coding = utf-8
 import unittest
 from selenium.webdriver.common.by import By
 from utils.config import  DATA_PATH

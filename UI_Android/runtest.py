@@ -1,3 +1,5 @@
+# coding:utf-8
+
 import unittest
 import os
 from utils.HTMLTestReportCN_screenshot import HTMLTestRunner

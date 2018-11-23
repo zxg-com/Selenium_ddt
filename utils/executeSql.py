@@ -1,3 +1,4 @@
+#coding = utf-8
 import  pymysql
 from utils.log import logger
 from utils.config import Config

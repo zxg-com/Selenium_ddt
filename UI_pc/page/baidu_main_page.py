@@ -1,3 +1,4 @@
+#coding = utf-8
 from selenium.webdriver.common.by import By
 from UI_pc.common.Basepage import BasePage
 from utils.file_reader import Readini,ExcelReader

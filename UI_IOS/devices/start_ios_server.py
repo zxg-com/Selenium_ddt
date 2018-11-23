@@ -1,3 +1,4 @@
+#coding = utf-8
 from UI_IOS.devices.doc_cmd import Doc_cmd
 import threading
 from utils.file_reader import Readini,YamlReader
@@ -11,8 +12,8 @@ class IOS_Server:
     def __init__(self):
         self.dos = Doc_cmd()
 #        self.devices_list=self.get_devices()
-        evpath = DRIVER_PATH + '/Android_environment.yml'
-        self.yaml = YamlReader(evpath)
+#         evpath = DRIVER_PATH + '/Android_environment.yml'
+#         self.yaml = YamlReader(evpath)
         self.uuid=self.get_devices_uuid()
 
     def get_devices_uuid(self):

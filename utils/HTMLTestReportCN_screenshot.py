@@ -1,4 +1,4 @@
-# coding=utf-8
+#coding = utf-8
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
 # URL: https://github.com/Gelomen/HTMLTestReportCN-ScreenShot
 

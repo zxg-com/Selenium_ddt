@@ -1,3 +1,4 @@
+#coding = utf-8
 """
 读取配置。这里配置文件用的yaml，也可用其他如XML,INI等，需在file_reader中添加相应的Reader进行处理。
 """
