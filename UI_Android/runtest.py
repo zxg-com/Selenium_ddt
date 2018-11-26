@@ -1,4 +1,4 @@
-# coding:utf-8
+#coding:utf-8
 
 import unittest
 import os
@@ -11,6 +11,8 @@ from UI_Android.devices.server import Server
 from UI_Android.common.driver_configure import driver_configure
 import threading
 from utils import ftpcontrol,wechart
+import sys
+sys.path.append(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0])
 
 class RunAll():
     def __init__(self):

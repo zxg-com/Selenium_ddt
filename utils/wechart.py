@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 #画缩略图
 #给企业号发报告功能
 from utils.config import DRIVER_PATH

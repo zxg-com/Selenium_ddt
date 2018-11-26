@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 #  页面元素集，操作元素的方法
 import time
 import os
@@ -21,10 +21,6 @@ class BasePage():
             dr = Driver_configure()
             driver = dr.get_driver()
             self.driver=driver
-
-        #cv使用action
-        self.action = ActionChains(self.driver)
-
 
 
     def get(self, url, maximize_window=True, implicitly_wait=30):    #get(url)

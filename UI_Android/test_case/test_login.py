@@ -1,5 +1,4 @@
-# coding:utf-8
-
+#coding:utf-8
 '''
 description:测试登录和退出功能
 '''

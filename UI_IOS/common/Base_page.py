@@ -1,4 +1,4 @@
-# coding:utf-8
+#coding:utf-8
 '''
 description:UI页面公共类
 '''

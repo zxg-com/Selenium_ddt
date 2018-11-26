@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
 # URL: https://github.com/Gelomen/HTMLTestReportCN-ScreenShot
 
@@ -843,8 +843,8 @@ class HTMLTestRunner(Template_mixin):
         self.stopTime = datetime.datetime.now()
         self.generateReport(test, result)
         # 优化测试结束后打印蓝色提示文字 -- Gelomen
-        print("\n\033[36;0m--------------------- 测试结束 ---------------------\n"
-              "------------- 合计耗时: %s -------------\033[0m" % (self.stopTime - self.startTime), file=sys.stderr)
+        print("\n--------------------- 测试结束 ---------------------\n"
+              "------------- 合计耗时: %s -------------" % (self.stopTime - self.startTime))
         return result
 
     def sortResult(self, result_list):

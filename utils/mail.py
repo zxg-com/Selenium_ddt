@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 """
 初始化时传入全部所需数据，message是正文，可不填，path可以传list或者str；receiver支持多人，用”;”隔开就行
 

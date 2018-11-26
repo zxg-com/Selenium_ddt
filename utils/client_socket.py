@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 import socket
 import json
 from utils.log import logger

@@ -1,4 +1,7 @@
-#coding = utf-8
+#coding:utf-8
+import sys
+import os
+sys.path.append(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0])
 
 import unittest
 import os
@@ -54,18 +57,20 @@ class RunAll():
         try:
 
             if suite is not None:
-                logger.info("*****开始执行测试*****")
+                #logger.info("*****开始执行测试*****")
                 with open(report,'wb') as f:
                     runner = HTMLTestRunner(f, verbosity=2, title=report_title, description='UI测试报告',tester='UI自动化测试',need_screenshot=0)
                     runner.run(suite)
                 f.close()
             else:
-                logger.error("error：*****没发现测试用例*****")
+                pass
+                #logger.error("error：*****没发现测试用例*****")
         except Exception as ex:
-            logger.error(ex)
+            pass
+            #logger.error(ex)
 
         finally:
-            logger.info("******测试结束******")
+            #logger.info("******测试结束******")
             #e = Email(path=report)  # 发邮件
             #e.send()
             #ftp上传报告文件和缩略图

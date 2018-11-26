@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 """json  XML  TEXT HEADERS抽取器，从响应结果中抽取部分数据"""
 
 import json

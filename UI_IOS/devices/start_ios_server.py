@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 from UI_IOS.devices.doc_cmd import Doc_cmd
 import threading
 from utils.file_reader import Readini,YamlReader

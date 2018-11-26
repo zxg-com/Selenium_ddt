@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 import unittest
 from selenium.webdriver.common.by import By
 from utils.config import  DATA_PATH
@@ -56,7 +56,7 @@ class TestBaiDu(unittest.TestCase):
     #     asserts.assert_in('百度', self.page.get_title())
 
     #--------open-cv环境操作----------
-    #@unittest.skip('测试跳过')
+    @unittest.skip('测试跳过')
     def test_search01(self):
         '''搜索数字'''
         try:

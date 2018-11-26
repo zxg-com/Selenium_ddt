@@ -1,4 +1,4 @@
-# coding:utf-8
+#coding:utf-8
 #获取设备信息
 from UI_Android.devices.doc_cmd import Doc_cmd
 import threading

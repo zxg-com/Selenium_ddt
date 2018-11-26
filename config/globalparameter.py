@@ -1,4 +1,4 @@
-# coding:utf-8
+#coding:utf-8
 #暂时未用
 '''
 description:配置全局参数

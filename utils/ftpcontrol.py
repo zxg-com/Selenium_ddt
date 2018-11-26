@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 from ftplib import FTP
 from utils.config import REPORT_PATH,Config
 

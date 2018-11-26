@@ -1,4 +1,4 @@
-#coding = utf-8
+#coding:utf-8
 #********配合config读取yaml配置文件的读取及存储
 #**********读取excel文件内容
 import yaml

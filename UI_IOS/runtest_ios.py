@@ -1,4 +1,7 @@
-#coding = utf-8
+#coding:utf-8
+import sys
+import os
+sys.path.append(os.path.split(os.path.dirname(os.path.abspath(__file__)))[0])
 import unittest
 import os
 from utils.HTMLTestReportCN_screenshot import HTMLTestRunner
