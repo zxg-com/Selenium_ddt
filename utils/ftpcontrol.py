@@ -14,12 +14,13 @@ def upload(remotepath, localpath):
     '''
 
     server_ip = Config().get('ServerInfo').get('ip')
-
+    user = Config().get('ServerInfo').get('name')
+    passwd = Config().get('ServerInfo').get('password')
 
     ftp = FTP()
     # ftp.set_debuglevel(2)
     ftp.connect(server_ip,21)
-    ftp.login()
+    ftp.login(str(user),str(passwd))
     ftp.set_pasv(False)  # 被动模式能上传成功，不设置总是超时
     #print(ftp.nlst() )
     bufsize = 1024
@@ -30,9 +31,9 @@ def upload(remotepath, localpath):
 
 
 
-# if __name__ == '__main__':
-#     fileName="a.html"
-#     upload(fileName,REPORT_PATH+"/"+fileName)
+if __name__ == '__main__':
+    fileName="a.html"
+    upload(fileName,REPORT_PATH+"/"+fileName)
 
 
 

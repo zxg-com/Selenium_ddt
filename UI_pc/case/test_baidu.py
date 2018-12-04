@@ -19,18 +19,17 @@ ecl=ExcelReader(excelpath,'首页输入数据').get_ddtvalue()
 ecl1 = ExcelReader(excelpath, sheetname='页面url')
 case_name='百度搜索'
 
-@ddt.ddt
+# @ddt.ddt
 class TestBaiDu(unittest.TestCase):
     '''搜索功能'''
     case_name = '百度搜索'
 
 
     def setUp(self):
-
-        URL = ecl1.rowsvalue(rowname='百度首页')[1]  # excel取值
-        self.page = BaiDuMainPage()
+        URL = ecl1.rowsvalue(rowname='百度首页')[1]  # exzcel取值
+        self.page=BaiDuMainPage()
         self.page.get(URL)
-        logger.info("打开" + URL)
+        #logger.info("打开" + URL)z
 
     # @classmethod
     # def setUpClass(cls):

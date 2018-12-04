@@ -41,7 +41,7 @@ WECHART: #企业号通知
 
 
 ServerInfo:
-  ip: 47.94.81.110
-  port: 8085
-  name:
-  password:
+  ip: 106.13.35.164
+  port: 80
+  name: zxg
+  password: 123456

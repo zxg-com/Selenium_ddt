@@ -39,6 +39,7 @@ class BaiDuMainPage(BasePage):
     #
 
 #--------------------------opencv-----------------------------
+
     item ='pc_baidu'
     page ='百度首页'
     element1='搜索输入框'

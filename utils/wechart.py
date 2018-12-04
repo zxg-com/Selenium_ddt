@@ -101,8 +101,8 @@ def sendmsg(test_title,pic_Nmae,report_name,start_time):
                     {
                         "title": title,
                         "description": "报告时间:"+starttime,
-                        "url":'http://'+server_ip+':'+port+'/'+reportname, #html文件地址即可
-                        "picurl": 'http://'+server_ip+':'+port+"/picture/"+picNmae  #画图，上传ftp
+                        "url":'http://'+server_ip+':'+'/'+reportname, #html文件地址即可
+                        "picurl": 'http://'+server_ip+':'+"/picture/"+picNmae  #画图，上传ftp
                     }
                 ]
             }
