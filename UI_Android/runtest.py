@@ -66,7 +66,7 @@ class RunAll():
                 with open(report, 'wb') as f:
                     runner = HTMLTestRunner(f, verbosity=2, title=report_title, description='UI测试报告', tester='UI自动化测试',
                                             need_screenshot=0)
-                    runner.run(suite)
+                    result=runner.run(suite)
                 f.close()
             else:
                 logger.error("error：*****没发现测试用例*****")
@@ -82,14 +82,15 @@ class RunAll():
             ftpcontrol.upload(localpath=REPORT_PATH + "/thumbnail_img/" + report_title + start_time + '.png',
                               remotepath="/picture/" + report_title + start_time + '.png')
             # 发送微信企业通知
-            wechart.sendmsg(test_title=report_title, pic_Nmae=report_title + start_time + '.png',
+            if (result.error_count > 0 or result.failure_count > 0):
+                wechart.sendmsg(test_title=report_title, pic_Nmae=report_title + start_time + '.png',
                             report_name=report_title + start_time + ".html", start_time=start_time)
 
 
 if __name__ == '__main__':
     r=RunAll()
+    # r.run()
     r.run()
-
     # s=Server()
     # g=driver_configure()
     # thread=[]
